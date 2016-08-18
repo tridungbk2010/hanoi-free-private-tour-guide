@@ -14,12 +14,13 @@ class SubscribeForm extends Component {
   }
 
   render() {
-    const urlIconPerson = require("../../images/icon-person.svg");
-    const urlIconMail = require("../../images/icon-mail.svg");
-    const urlIconPhone = require("../../images/icon-phone.svg");
-    const urlIconBuilding = require("../../images/icon-buiding.svg");
-    const urlIconGroup = require("../../images/icon-group.svg");
-    const urlIconMap = require("../../images/icon-map-point.svg");
+    const iconUser = <i className="fa fa-user fa-lg" aria-hidden="true"/>;
+    const iconMail = <i className="fa fa-envelope fa-lg" aria-hidden="true"/>;
+    const iconPhone = <i className="fa fa-phone fa-lg" aria-hidden="true"/>;
+    const iconBuilding = <i className="fa fa-building-o fa-lg" aria-hidden="true"/>;
+    const iconGroup = <i className="fa fa-users fa-lg" aria-hidden="true"/>;
+    const iconMap = <i className="fa fa-map-marker fa-lg" aria-hidden="true"/>;
+
     const {dataForm, onChange, onSave, errors, saving} = this.props;
     return (
       <div className="fl-form-subscribe container-fluid">
@@ -27,7 +28,7 @@ class SubscribeForm extends Component {
           <form>
             <div className="fl-vertical-field">
               <div>
-                <TextInput urlIcon={urlIconPerson}
+                <TextInput icon={iconUser}
                            name="firstName"
                            onChange={onChange}
                            value={dataForm.firstName}
@@ -44,7 +45,7 @@ class SubscribeForm extends Component {
             </div>
             <div className="fl-horizontal-field">
               <div>
-                <TextInput urlIcon={urlIconMail}
+                <TextInput icon={iconMail}
                            name="email"
                            value={dataForm.email}
                            error={errors.email}
@@ -52,14 +53,14 @@ class SubscribeForm extends Component {
                            placeholder="email@email.com"/>
               </div>
               <div>
-                <TextInput urlIcon={urlIconPhone} name="phoneNumber"
+                <TextInput icon={iconPhone} name="phoneNumber"
                            onChange={onChange}
                            value={dataForm.phoneNumber}
                            error={errors.phoneNumber}
-                           placeholder="eg:0977825106"/>
+                           placeholder="eg: 0977825106"/>
               </div>
               <div>
-                <TextInput urlIcon={urlIconBuilding} name="companyName"
+                <TextInput icon={iconBuilding} name="companyName"
                            onChange={onChange}
                            value={dataForm.companyName}
                            error={errors.companyName}
@@ -67,7 +68,7 @@ class SubscribeForm extends Component {
               </div>
             </div>
             <div className="fl-vertical-field">
-              <SelectInput urlIcon={urlIconGroup}
+              <SelectInput icon={iconGroup}
                            name="companySize"
                            onChange={onChange}
                            value={dataForm.companySize}
@@ -76,7 +77,7 @@ class SubscribeForm extends Component {
                            options={DATA_COMPANY_SIZE}
                            placeholder="Company size"/>
 
-              <SelectInput urlIcon={urlIconMap}
+              <SelectInput icon={iconMap}
                            onChange={onChange}
                            error={errors.country}
                            name="country"

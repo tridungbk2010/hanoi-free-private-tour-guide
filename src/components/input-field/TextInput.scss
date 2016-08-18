@@ -1,6 +1,7 @@
 @import "../../styles/colors";
 
 .field{
+  position: relative;
   .form-control{
     height: 40px !important;
     &:focus{
@@ -17,6 +18,37 @@
   }
   .fl-alert{
     font-size: 13px;
+    font-weight: 300;
     color:$LIGHT_RED;
   }
+  .icon-in-form{
+    font-family: 'FontAwesome', sans-serif;
+    position: absolute;
+    top:10px;
+    left:10px;
+    i{
+      font-size: 16px;
+      color:$GRAY
+    }
+  }
+  .has-error-icon{
+    i{
+      color:$LIGHT_RED
+    }
+  }
+  .fl-input{
+    padding-left: 28px;
+  }
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill{
+    -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+    &:focus{
+      background-color: #fff !important;
+    }
+  }
+}
+
+.has-error .form-control{
+  border-color: $LIGHT_RED !important;
 }

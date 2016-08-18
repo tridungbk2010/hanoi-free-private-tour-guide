@@ -5,15 +5,15 @@ import React, {Component, PropTypes} from "react";
 import Layout from "../../components/layout/Layout";
 import ManageRequest from "./ManageRequest";
 import {connect} from 'react-redux';
-import "./Register.scss";
+import "./RequestDemo.scss";
 
 class Register extends Component {
   render() {
     return (
       <Layout children={
-        <div className="fl-register">
-          <div className="fl-register-title">Thank you for your interest!</div>
-          <p className="fl-register-description">
+        <div className="fl-request-demo">
+          <div className="fl-request-demo-title">Thank you for your interest!</div>
+          <p className="fl-request-demo-description">
             FLOW will become available later this year, but we would be delighted to give you a
             sneak preview of its powerful features. To request a demo, please fill in your details below.
           </p>

@@ -16,7 +16,6 @@
   }
   .fl-cover-title-form{
     font-weight: bold;
-    font-size: 24px;
   }
 }
 
@@ -33,10 +32,10 @@
 @media (min-width: 992px) and (max-width: 1199px) {
   .flCover{
     .fl-cover-title-form{
-      width: 420px;
+      width: 400px;
     }
     .fl-form-subscribe-desc{
-      width: 330px;
+      width: 400px;
       font-size: 16px;
       line-height: 1.3em;
       letter-spacing: 0;
@@ -51,13 +50,13 @@
 @media (min-width: 1200px) {
   .flCover{
     .fl-form-subscribe-desc{
-      width: 330px;
+      width: 400px;
       font-size: 16px;
       line-height: 1.3em;
       letter-spacing: 0;
     }
     .fl-cover-title-form{
-      width: 420px;
+      width: 400px;
     }
     height:100%;
   }

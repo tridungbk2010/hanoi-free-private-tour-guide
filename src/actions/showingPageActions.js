@@ -3,11 +3,11 @@
  */
 import * as actionTypes from '../constants/actionTypes';
 
-export function showLoginPage(hasShow, source) {
+export function showLoginPage(hasShow) {
   return dispatch =>{
     dispatch({
-      type:actionTypes.SHOW_REGISTER_PAGE,
-      hasShowRegisterPage:false
+      type:actionTypes.SHOW_REQUEST_DEMO_PAGE,
+      showRequestDemoPage:false
     });
     dispatch({
       type:actionTypes.SHOW_REQUEST_SUCCESS_PAGE,
@@ -15,13 +15,12 @@ export function showLoginPage(hasShow, source) {
     });
     dispatch({
       type:actionTypes.SHOW_LOGIN_PAGE,
-      hasShow,
-      source
+      hasShow
     })
   }
 }
 
-export function showRegisterPage(hasShowRegisterPage) {
+export function showRequestDemoPage(showRequestDemoPage) {
   return dispatch =>{
     dispatch({
       type:actionTypes.SHOW_LOGIN_PAGE,
@@ -32,8 +31,8 @@ export function showRegisterPage(hasShowRegisterPage) {
       hasRequestSuccessPage:false
     });
     dispatch({
-      type:actionTypes.SHOW_REGISTER_PAGE,
-      hasShowRegisterPage
+      type:actionTypes.SHOW_REQUEST_DEMO_PAGE,
+      showRequestDemoPage
     });
   }
 }
@@ -45,8 +44,8 @@ export function showRequestSuccessPage(hasRequestSuccessPage) {
       hasShow:false
     });
     dispatch({
-      type:actionTypes.SHOW_REGISTER_PAGE,
-      hasShowRegisterPage:false
+      type:actionTypes.SHOW_REQUEST_DEMO_PAGE,
+      showRequestDemoPage:false
     });
     dispatch({
       type:actionTypes.SHOW_REQUEST_SUCCESS_PAGE,

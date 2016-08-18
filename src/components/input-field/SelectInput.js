@@ -4,21 +4,16 @@
 import React, {PropTypes} from "react";
 import "./SelectInput.scss";
 
-const SelectInput = ({name, onChange, defaultOption, value, error, options, urlIcon}) => {
-  const styleInput = {
-    backgroundImage: "url(" + urlIcon + ")",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "scroll",
-    backgroundColor: "#fff",
-    backgroundPosition: "10px center"
-  };
-
+const SelectInput = ({name, onChange, defaultOption, value, error, options, icon}) => {
+  const classErrorIcon = error?"icon-in-form has-error-icon":"icon-in-form";
   return (
     <div className="form-group">
       <div className="field">
         {/* Note, value is set here rather than on the option - docs: https://facebook.github.io/react/docs/forms.html */}
+        <span className={classErrorIcon}>
+          {icon}
+        </span>
         <select
-          style={urlIcon && styleInput}
           name={name}
           value={value}
           onChange={onChange}
@@ -38,7 +33,7 @@ SelectInput.propTypes = {
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func,
   defaultOption: PropTypes.string,
-  urlIcon: PropTypes.string,
+  icon: PropTypes.element,
   value: PropTypes.string,
   error: PropTypes.string,
   options: PropTypes.array

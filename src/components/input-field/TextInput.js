@@ -2,29 +2,25 @@
  * Created by Chris Ho on 8/3/2016.
  */
 import React, {PropTypes} from "react";
-import './TextInput.scss';
+import "./TextInput.scss";
 
-const TextInput = ({name, onChange, placeholder, value, error, urlIcon}) => {
+const TextInput = ({name, onChange, placeholder, value, error, icon}) => {
   let wrapperClass = 'form-group';
   if (error && error.length > 0) {
     wrapperClass += " " + 'has-error';
   }
-  const styleInput = {
-    backgroundImage: "url(" + urlIcon + ")",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "scroll",
-    backgroundPosition: "10px center",
-    paddingLeft:30
-  };
-
+  const classErrorIcon = error?"icon-in-form has-error-icon":"icon-in-form";
+  const hasPaddingClass = icon ? "form-control fl-input" : "form-control";
   return (
     <div className={wrapperClass}>
       <div className="field">
+        <span className={classErrorIcon}>
+          {icon}
+        </span>
         <input
-          style={urlIcon && styleInput}
           type="text"
           name={name}
-          className="form-control"
+          className={hasPaddingClass}
           placeholder={placeholder}
           value={value}
           onChange={onChange}/>
@@ -38,7 +34,7 @@ TextInput.propTypes = {
   name: PropTypes.string,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
-  urlIcon: PropTypes.string,
+  icon: PropTypes.element,
   value: PropTypes.string,
   error: PropTypes.string
 };

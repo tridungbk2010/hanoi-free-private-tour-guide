@@ -23,7 +23,7 @@ class CheckBox extends Component {
     const {name, text, onChange} = this.props;
     return (
       <label className="fl-checkbox">
-        <label className="fancy-checkbox">
+        <label className="fancy-checkbox" >
           <input type="checkbox" checked={this.state.isChecked} name={name} onChange={onChange} onClick={this.handleChange}/>
           <span>{text}</span>
         </label>

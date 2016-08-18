@@ -7,7 +7,6 @@ import "./Button.scss";
 const Button = (props)=> {
   const styleButton = {
     width: props.autoWidth ? "100%" :props.width,
-    padding: '0 20px',
     backgroundColor:props.bgColor && props.bgColor
   };
   return (

@@ -7,10 +7,10 @@ import Pricing from "../components/pricing/Pricing";
 import Contact from "../components/contact/Contact";
 import Footer from "../components/common/Footer";
 import Login from "../containers/login/Login";
-import Register from "../containers/register/Register";
+import Register from "../containers/register/RequestDemo";
 import RequestSuccess from "../containers/register/RequestSuccess";
 import {connect} from "react-redux";
-import {Element, scroller} from "react-scroll";
+import {Element} from "react-scroll";
 // import {browserHistory} from "react-router";
 // import {Link} from "react-router";
 
@@ -20,23 +20,11 @@ class HomePage extends Component {
     super(props);
   }
 
-  componentWillReceiveProps(newProps) {
-    if (newProps.menu !== this.props.menu) {
-      scroller.scrollTo(newProps.menu, {
-        duration: 1000,
-        delay: 0,
-        offset: -60,
-        smooth: true,
-        isDynamic: true
-      })
-    }
-  }
-
   render() {
     return (
       <div className="homePage">
         {this.props.showLoginPage &&  <Login />}
-        {this.props.showRegisterPage &&  <Register />}
+        {this.props.showRequestDemoPage &&  <Register />}
         {this.props.showSuccessPage &&  <RequestSuccess />}
         <Cover />
         <div className="bodyContent">
@@ -49,13 +37,13 @@ class HomePage extends Component {
           </div>
         </Element>
 
-        <Element name="Team" hash="Team" className="element">
+        <Element name="Team" className="element">
           <div className="bodyContent">
             <TeamMember />
           </div>
         </Element>
 
-        <Element name="Pricing" hash="Pricing" className="element">
+        <Element name="Pricing" className="element">
           <Pricing />
         </Element>
 
@@ -71,21 +59,17 @@ class HomePage extends Component {
 }
 
 HomePage.propTypes = {
-  target: PropTypes.string,
-  menu: PropTypes.string,
   showLoginPage: PropTypes.bool,
-  showRegisterPage: PropTypes.bool,
+  showRequestDemoPage: PropTypes.bool,
   showSuccessPage: PropTypes.bool
 };
 
 function mapStateToProps(state) {
-  console.log("[HOME]_mapStateToProps", state.showingRequestSuccessReducer);
   return {
-    menu: state.scrollToDivReducer,
     showLoginPage: state.showingPageReducer,
-    showRegisterPage:state.showRegisterPageReducer,
+    showRequestDemoPage:state.showRequestDemoReducer,
     showSuccessPage:state.showingRequestSuccessReducer
-  }
+  };
 }
 
 export default connect(mapStateToProps, null)(HomePage);

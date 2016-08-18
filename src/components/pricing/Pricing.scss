@@ -11,11 +11,17 @@
 }
 .fl-pricing-modules{
   border-top: 1px solid #9FA09D;
-  padding:5px 0 5px 0;
-  min-height: 65px;
+  padding:10px 0;
+  display: table;
+  width: 100%;
+  &:last-child{
+    padding-top: 5px;
+  }
   .mdType{
     font-weight: 700;
     font-size: 14px;
+    padding: 2px 0;
+    display: table-row;
   }
   .no-content{
     color: rgb(159,161,158);
@@ -25,6 +31,11 @@
     .modules-content{
       display: inline-block;
       width: 100%;
+    }
+    &:last-child{
+      min-height: 58px;
+      min-width:224px;
+      padding-top: 4px;
     }
   }
 }

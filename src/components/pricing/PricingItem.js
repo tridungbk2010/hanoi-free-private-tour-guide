@@ -16,8 +16,10 @@ const PricingItem = (props)=> {
           <div>
             <PricingHeader text={props.header}/>
           </div>
-          <div>
-            {props.description}
+          <div className="fl-pricing-item-des">
+            <div className="middle-content">
+              {props.description}
+            </div>
           </div>
           <div className="fl-module">
             {props.modules && props.modules.map(

@@ -12,14 +12,13 @@ class Cover extends Component {
       <section className="flCover">
         <div className="subscribeForm">
           <div className="fl-cover-title-form">
-            <Title content={"An HR analytics tool to screen, engage and retain top talent, scientifically"}
+            <Title content={"Assessments that boost employee engagement, scientifically"}
                    color={"#fff"}
                    fontWeight={true}
                    size={"medium"}
             />
           </div>
-          <p className="fl-form-subscribe-desc">{"See how FLOW can save you millions of dollars by helping you focus " +
-          "on HR metrics that matter"}</p>
+          <p className="fl-form-subscribe-desc">{"Unlock your team's full potential with FLOW's proprietary psychological tests and predictive algorithms"}</p>
           <ManageRequest source="Web-top" />
         </div>
       </section>

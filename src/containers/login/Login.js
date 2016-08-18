@@ -18,7 +18,7 @@ class Login extends Component {
   }
 
   handleRegister() {
-    this.props.actions.showRegisterPage(true);
+    //this.props.actions.showRegisterPage(true);
   }
 
   render() {

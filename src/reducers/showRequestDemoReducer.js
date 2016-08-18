@@ -4,10 +4,10 @@
 import * as actionTypes from "../constants/actionTypes";
 import initialState from "./initialState";
 
-export default function showRegisterPageReducer(state = initialState.hasShowLoginPage, action) {
+export default function showRequestDemoReducer(state = initialState.hasShowLoginPage, action) {
   switch (action.type) {
-    case actionTypes.SHOW_REGISTER_PAGE:
-      return action.hasShowRegisterPage;
+    case actionTypes.SHOW_REQUEST_DEMO_PAGE:
+      return action.showRequestDemoPage;
     default:
       return state;
   }

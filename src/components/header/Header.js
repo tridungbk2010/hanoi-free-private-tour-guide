@@ -25,7 +25,7 @@ class Header extends Component {
   }
 
   handleClickLogo() {
-    this.props.actions.showRegisterPage(false);
+    this.props.actions.showRequestDemoPage(false);
     this.props.actions.showLoginPage(false);
     let posX = window.pageXOffset;
     let posY = window.pageYOffset;
@@ -38,7 +38,6 @@ class Header extends Component {
       } else {
         incrementer += 1;
         posY -= Math.pow(1.2, incrementer);
-        console.log("posY", posY);
         window.scrollTo(posX, posY);
       }
     }

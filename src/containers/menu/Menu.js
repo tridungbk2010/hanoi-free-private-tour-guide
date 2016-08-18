@@ -11,6 +11,7 @@ import * as menuActions from "../../actions/menuActions";
 import * as showingPageActions from "../../actions/showingPageActions";
 import NetworkIcon from "../../components/common/NetworkIcon";
 import {browserHistory} from "react-router";
+import {scroller} from "react-scroll";
 import "./Menu.scss";
 
 const MENU_DATA = [
@@ -21,7 +22,7 @@ const MENU_DATA = [
   {name: 'Login', id: 5},
   {name: 'Blog', id: 6}
 ];
-//const enhanceWithClickOutside = require('react-click-outside');
+const enhanceWithClickOutside = require('react-click-outside');
 class Menu extends Component {
   constructor(props) {
     super(props);
@@ -36,7 +37,14 @@ class Menu extends Component {
 
   handleScroll(menuName) {
     browserHistory.push("/");
-    this.props.actions.clickMenu(menuName);
+    this.props.actions.clickMenu();
+    scroller.scrollTo(menuName, {
+      duration: 1000,
+      delay: 0,
+      offset: -60,
+      smooth: true,
+      isDynamic: true
+    });
     this.setState({
       isShowing: !this.state.isShowing
     });
@@ -140,4 +148,4 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect(null, mapDispatchToProps)(Menu);
+export default connect(null, mapDispatchToProps)(enhanceWithClickOutside(Menu));

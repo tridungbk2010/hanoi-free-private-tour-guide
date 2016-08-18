@@ -6,7 +6,8 @@ import React, {PropTypes} from 'react';
 const Price =(props)=> {
   const styleDiv = {
     fontWeight:"bold",
-    fontSize:14
+    fontSize:14,
+    display:'inline-block'
   };
     return (
       <span className="fl-price" style={styleDiv}>

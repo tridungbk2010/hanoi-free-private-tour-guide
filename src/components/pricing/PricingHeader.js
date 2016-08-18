@@ -9,7 +9,7 @@ const PricingHeader = (props)=> {
     borderRadius: "4px 4px 0 0",
     textAlign: "center",
     color: "#fff",
-    fontSize: 14,
+    fontSize: 16,
     lineHeight:"40px",
     height:40,
     fontWeight:700,

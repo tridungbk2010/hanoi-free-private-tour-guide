@@ -20,6 +20,7 @@ class ManageRequest extends Component {
         phoneNumber: '',
         companyName: '',
         companySize: '',
+        hrBrief:true,
         country: ''
       },
       errors: {},
@@ -34,13 +35,13 @@ class ManageRequest extends Component {
     const field = event.target.name;
     let dataForm = this.state.dataForm;
     let isChecked = true;
-    if (field === "hfBrief") {
+    if (field === "hrBrief") {
+      console.log("hrBrief========",event.target.checked);
       isChecked = event.target.checked;
     } else {
       dataForm[field] = event.target.value;
     }
     this.courseFormIsValid();
-
     return this.setState({
       dataForm: Object.assign({}, dataForm, {hrBrief: isChecked}, {source:this.props.source})
     });
@@ -84,7 +85,7 @@ class ManageRequest extends Component {
     if (this.state.dataForm.companySize === "" ||
       this.state.dataForm.companySize === "Company size"
     ) {
-      errors.companySize = textValidator.COMPANY_SIZE
+      errors.companySize = textValidator.COMPANY_SIZE;
       formIsValid = false;
     }
 
@@ -158,8 +159,9 @@ function validateEmail(email) {
 }
 
 function validatePhoneNumber(dataInput) {
-  var phoneNo = /^\d{10}$/;
-  return phoneNo.test(dataInput);
+  const dataLength = dataInput.length;
+  var reg = /^\d+$/;
+  return(reg.test(dataInput) && dataLength > 5 && dataLength < 20);
 }
 
 function mapDispatchToProps(dispatch) {
@@ -169,7 +171,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(state) {
-  console.log("mapStateToProps", state.sendInBlueReducer);
   return {
     emailResponse: state.sendInBlueReducer
   }

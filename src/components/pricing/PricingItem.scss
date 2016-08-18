@@ -3,13 +3,25 @@
   > div {
     > div {
       >div{
-        padding: 5px 0;
         text-align: center;
       }
     }
   }
   .fl-pricing-item-el{
     display: table;
+  }
+  .fl-pricing-item-des{
+    min-height: 65px;
+    width: 100%;
+    padding: 2px 0;
+    display: table;
+    .middle-content{
+      vertical-align: middle;
+      display: table-cell;
+    }
+  }
+  .fl-price{
+    padding-top: 14px;
   }
 }
 
