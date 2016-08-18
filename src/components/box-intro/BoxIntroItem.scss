@@ -1,0 +1,24 @@
+@import "../../styles/colors";
+
+.fl-box-intro-items {
+  .fl-box-intro-icon {
+    text-align: center;
+    font-size: 32px;
+    color: $LIGHT_RED;
+  }
+  .fl-box-intro-headline {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .fl-box-intro-content {
+    padding: 0 20px;
+    margin-top: 8px;
+    line-height: 1.3em;
+    font-size: 16px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+

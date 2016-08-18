@@ -1,0 +1,64 @@
+@import "../../styles/colors";
+
+.flMenu{
+  width: 100vw;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  .listMenu{
+    position: absolute;
+    z-index: 10;
+    -webkit-transform: translateX(-280px);
+    transform: translateX(-280px);
+    -webkit-transition: all 0.25s ease;
+    transition: .25s ease all;
+    top:60px;
+    left:0;
+    background-color:$DARK_NAVY ;
+    padding-left: 0 !important;
+    height: 100vh;
+  }
+  .showMenu{
+    top:60px;
+    left: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: .25s ease all;
+    transition: .25s ease all;
+  }
+  .ulListMenu{
+    padding-top: 10px;
+    list-style: none;
+    padding-left: 0;
+    color: #fff;
+    a{
+      text-decoration: none;
+    }
+  }
+  .menu-social-icon{
+    margin-left:35px;
+    line-height: 0;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .showMenu{
+    width:100vw;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .showMenu{
+    width:100vw;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .showMenu{
+    width: 280px;
+  }
+}
+@media (min-width: 1200px) {
+  .showMenu{
+    width: 280px;
+  }
+}

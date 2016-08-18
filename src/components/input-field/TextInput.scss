@@ -1,0 +1,22 @@
+@import "../../styles/colors";
+
+.field{
+  .form-control{
+    height: 40px !important;
+    &:focus{
+      border: none;
+      box-shadow: none !important;
+    }
+    &:active{
+      border: none;
+      box-shadow: none !important;
+    }
+  }
+  .has-error{
+    display: inline-table;
+  }
+  .fl-alert{
+    font-size: 13px;
+    color:$LIGHT_RED;
+  }
+}

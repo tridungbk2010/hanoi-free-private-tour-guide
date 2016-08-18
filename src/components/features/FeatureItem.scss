@@ -1,0 +1,25 @@
+@import "../../styles/colors";
+
+.fl-feature-item{
+  margin-top: 36px;
+  .fl-feature-headline{
+    font-size: 16px;
+    font-weight:bold;
+    margin-top: 0 !important;
+  }
+  .fl-feature-content{
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.3em;
+    text-justify: inter-word;
+  }
+  .fl-feature-btn{
+    margin:10px 0 ;
+  }
+  .fl-feature-img{
+    >img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}

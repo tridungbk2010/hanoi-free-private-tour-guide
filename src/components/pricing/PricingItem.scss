@@ -1,0 +1,15 @@
+.fl-pricing-item {
+  padding-bottom:10px;
+  > div {
+    > div {
+      >div{
+        padding: 5px 0;
+        text-align: center;
+      }
+    }
+  }
+  .fl-pricing-item-el{
+    display: table;
+  }
+}
+

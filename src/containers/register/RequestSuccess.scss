@@ -1,0 +1,36 @@
+.fl-layout-request-success {
+  width: 320px;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  .fl-register-title {
+    font-size: 16px;
+    color: #fff;
+    padding-top: 30px;
+    text-align: center;
+    font-weight: 700;
+  }
+  .fl-rqss-text-block {
+    font-size: 16px;
+    line-height: 1.3em;
+    color: #fff;
+    font-weight: 100;
+    text-align: justify;
+  }
+  .fl-rqss-action{
+    margin-top: 30px;
+    .fl-rqss-btn-blog{
+      margin: 10px 0;
+    }
+    span{
+      font-size: 16px;
+    }
+
+  }
+  .rqss-group-social{
+    margin-top: 30px;
+    p{
+      font-size: 16px;
+    }
+  }
+}

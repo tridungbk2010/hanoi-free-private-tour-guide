@@ -1,0 +1,15 @@
+@import "../../styles/colors";
+.fl-layout{
+  background: $NAVY;
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 101;
+  overflow: scroll;
+  padding-bottom: 20px;
+  .fl-layout-wrap-form{
+    margin:60px auto 0 auto;
+  }
+}

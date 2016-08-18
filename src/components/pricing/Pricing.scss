@@ -1,0 +1,48 @@
+.fl-pricing{
+  padding-bottom: 20px;
+  background-color: #9DC3CC;
+  .fl-pricing-title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 30px 0 10px 0;
+  }
+}
+.fl-pricing-modules{
+  border-top: 1px solid #9FA09D;
+  padding:5px 0 5px 0;
+  min-height: 65px;
+  .mdType{
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .no-content{
+    color: rgb(159,161,158);
+  }
+  .mdContent{
+    font-size: 14px;
+    .modules-content{
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 767px) {
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .fixWidth{
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .fixWidth{
+    width: 1000px;
+    margin: 0 auto;
+  }
+}

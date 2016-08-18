@@ -1,0 +1,17 @@
+@import "../../styles/colors";
+
+.fl-select-field{
+  text-indent:20px !important;
+  padding:6px !important;
+  .fl-option-field-default{
+    color:$GRAY !important;
+  }
+  .fl-option-field-value{
+    color:$DARK_NAVY
+  }
+  .fl-alert{
+    font-size: 13px;
+    color:$LIGHT_RED;
+  }
+}
+

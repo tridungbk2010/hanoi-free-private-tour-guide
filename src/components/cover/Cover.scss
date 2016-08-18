@@ -1,0 +1,68 @@
+@import "../../styles/colors";
+
+.flCover{
+  position: relative;
+  margin-top: 60px;
+  background-color:$NAVY ;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  .playerButton{
+    position: absolute;
+    top:50%;
+    left:50%;
+  }
+  .subscribeForm{
+    padding: 36px 0 20px 0;
+  }
+  .fl-cover-title-form{
+    font-weight: bold;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .flCover{
+    height:100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .flCover{
+    height:100%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .flCover{
+    .fl-cover-title-form{
+      width: 420px;
+    }
+    .fl-form-subscribe-desc{
+      width: 330px;
+      font-size: 16px;
+      line-height: 1.3em;
+      letter-spacing: 0;
+    }
+    height:100%;
+  }
+  .subscribeForm{
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .flCover{
+    .fl-form-subscribe-desc{
+      width: 330px;
+      font-size: 16px;
+      line-height: 1.3em;
+      letter-spacing: 0;
+    }
+    .fl-cover-title-form{
+      width: 420px;
+    }
+    height:100%;
+  }
+  .subscribeForm{
+    width: 1000px;
+    margin: 0 auto;
+  }
+}

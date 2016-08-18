@@ -1,0 +1,21 @@
+.fl-checkbox {
+  font-weight: 300;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+
+  .fancy-checkbox input[type="checkbox"] {
+    display: none;
+  }
+  .fancy-checkbox span:before {
+    font-family: "FontAwesome", sans-serif;
+    width: 1em;
+    height: 1em;
+    content: '\f096';
+    margin-right: .3em;
+  }
+
+  .fancy-checkbox input[type="checkbox"]:checked ~ span:before {
+    content: '\f14a';
+  }
+}

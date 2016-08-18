@@ -1,0 +1,18 @@
+.menuItem {
+  padding-left: 40px !important;
+  line-height: 40px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  color: #fff;
+  &:hover {
+    padding-left: 36px !important;
+    border-left: 4px solid #f1e6d0;
+    font-weight: bold;
+    color: #f1e6d0 !important;
+  }
+  .active {
+    border-left: 4px solid #f1e6d0;
+    font-weight: bold;
+    color: #f1e6d0;
+  }
+}

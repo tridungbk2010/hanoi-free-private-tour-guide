@@ -1,0 +1,44 @@
+.fl-contact{
+  padding-bottom: 40px;
+  .fl-contact-items{
+    .fl-contact-item{
+      margin: 10px 0;
+      text-align: center;
+      p{
+        margin-bottom: 0 !important;
+      }
+    }
+    .fl-contact-item:nth-child(1){
+      padding-top: 30px;
+    }
+  }
+  .fl-contact-place{
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+    padding-bottom: 25px;
+  }
+  .fl-contact-title{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .fl-contact-desc{
+    text-align: center;
+    font-size: 14px;
+  }
+  .fl-contact-network{
+    p{
+      margin-top:10px ;
+    }
+    margin: 10px 0;
+    text-align: center;
+  }
+  .fl-contact-network-btn{
+    margin: 0 auto;
+    max-width: 180px;
+  }
+}
+
+

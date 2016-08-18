@@ -1,0 +1,26 @@
+@import "../../styles/colors";
+
+.footer{
+  position: relative;
+  background-color: $DARK_NAVY;
+  height: 90px;
+  line-height:90px;
+
+  .term{
+    color: #fff;
+    padding-left:10px ;
+    &:hover{
+      color: $YELLOW;
+      text-decoration: none;
+    }
+  }
+  .copyRight{
+    color: #fff;
+    position: absolute;
+    left: 47%;
+    &:hover{
+      text-decoration: none;
+      color: $YELLOW;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "../../styles/colors";
+
+.flowHeader {
+  height: 60px;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: fixed !important;
+  z-index: 999;
+  width: 100%;
+  background-color: #fff;
+  top:0;
+  left:0;
+  .flowLogo {
+    text-align: center;
+    height: 60px;
+  }
+  .leftAction {
+    text-align: left;
+    line-height: 60px;
+  }
+  .rightAction {
+    text-align: right;
+    line-height: 60px;
+    a{
+      text-decoration: none !important;
+    }
+  }
+}

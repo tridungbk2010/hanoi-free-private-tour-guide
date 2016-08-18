@@ -1,0 +1,22 @@
+@import "../../styles/colors";
+
+.fl-network-icon{
+  display: inline-block;
+  font-family: 'FontAwesome', sans-serif;
+  >a{
+    display: inline-block;
+    margin:  0 5px !important;
+  }
+  .fl-social-small-icon{
+    color: #fff;
+    &:hover{
+      color: $YELLOW;
+    }
+  }
+  .fl-social-medium-icon{
+    color: $LIGHT_RED;
+    &:hover{
+      color: $DARK_RED;
+    }
+  }
+}
