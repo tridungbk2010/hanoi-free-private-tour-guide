@@ -1,7 +1,7 @@
 {
-  "name": "flowzone",
+  "name": "hanoi-free-private-tour-guide",
   "version": "1.0.0",
-  "description": "Web application to help companies screen for culture fit, and then motivate and retain their best talent",
+  "description": "book free tour",
   "scripts": {
     "setup": "node tools/setup/setupMessage.js && npm install && node tools/setup/setup.js",
     "remove-demo": "babel-node tools/removeDemo.js",
