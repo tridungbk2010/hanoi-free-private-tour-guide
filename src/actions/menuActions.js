@@ -3,19 +3,9 @@
  */
 import * as actionTypes from "../constants/actionTypes";
 
-export function clickMenu() {
-  return dispatch => {
-    dispatch({
-      type:actionTypes.SHOW_LOGIN_PAGE,
-      hasShow:false
-    });
-    dispatch({
-      type:actionTypes.SHOW_REQUEST_DEMO_PAGE,
-      showRequestDemoPage:false
-    });
-    dispatch({
-      type:actionTypes.SHOW_REQUEST_SUCCESS_PAGE,
-      hasRequestSuccessPage:false
-    });
+export function clickMenu(menu) {
+  return {
+    type: actionTypes.CLICK_MENU,
+    menu
   }
 }

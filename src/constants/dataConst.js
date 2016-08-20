@@ -1,7 +1,6 @@
 /**
  * Created by Chris Ho on 7/26/2016.
  */
-import React from 'react';
 export const COUNTRY_DATA = [
   "Afghanistan",
   "Aland Islands",
@@ -368,28 +367,5 @@ export const DATA_ADDRESS = [
     national: "United States",
     address: ["582 Market Street, Suite 204","San Francisco","CA 94104"],
     urlMap:"https://www.google.com/maps/embed/v1/place?q=582+Market+Street,+Suite+204+San+Francisco+CA+94104+United+States&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"
-  }
-];
-
-export const INTRO_DATA = [
-  {
-    icon: <i className="fa fa-puzzle-piece fa-3x" aria-hidden="true" />,
-    headLine: "SCREEN FOR CULTURE FIT",
-    content: "Startups need people who will walk the extra mile every day to make the company a success. " +
-    "FLOW helps you identify the candidates who are most likely to thrive in and enrich your culture."
-  },
-  {
-    icon: <i className="fa fa-line-chart fa-3x" aria-hidden="true" />,
-    headLine: "IMPROVE ENGAGEMENT",
-    content: "FLOW is the only tool that measures both your people's motivators and their engagement. " +
-    "This way you can focus on the metrics that matter, " +
-    "meaningfully improving engagement without wasting valuable resources."
-  },
-  {
-    icon: <i className="fa fa-life-ring fa-3x" aria-hidden="true" />,
-    headLine: "PREVENT UNWANTED TURNOVER",
-    content: "Retaining your best people is the key to creating a scalable culture. " +
-    "FLOW's predictive algorithms help you forecast attrition risk and identify " +
-    "the most effective preventive measures. "
   }
 ];

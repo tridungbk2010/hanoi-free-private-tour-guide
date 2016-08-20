@@ -4,10 +4,10 @@
 import React, {Component, PropTypes} from "react";
 import Layout from "../../components/layout/Layout";
 import ManageRequest from "./ManageRequest";
-import {connect} from 'react-redux';
+// import {connect} from 'react-redux';
 import "./RequestDemo.scss";
 
-class Register extends Component {
+class RequestDemo extends Component {
   render() {
     return (
       <Layout children={
@@ -25,14 +25,8 @@ class Register extends Component {
   }
 }
 
-Register.propTypes = {
+RequestDemo.propTypes = {
   source: PropTypes.string
 };
 
-function mapStateToProps(state) {
-  return {
-    source:state.sourceReducer
-  }
-}
-
-export default connect(mapStateToProps, null)(Register);
+export default RequestDemo;

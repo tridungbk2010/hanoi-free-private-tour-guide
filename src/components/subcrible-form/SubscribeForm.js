@@ -57,7 +57,7 @@ class SubscribeForm extends Component {
                            onChange={onChange}
                            value={dataForm.phoneNumber}
                            error={errors.phoneNumber}
-                           placeholder="eg: 0977825106"/>
+                           placeholder="eg:0977825106"/>
               </div>
               <div>
                 <TextInput icon={iconBuilding} name="companyName"

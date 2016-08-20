@@ -6,30 +6,24 @@ import Logo from "../logo/Logo";
 import Menu from "../../containers/menu/Menu";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
-import * as showingPageActions from "../../actions/showingPageActions";
-import * as sourceActions from "../../actions/sourceActions";
+import * as menuActions from '../../actions/menuActions';
 import Icon from "../icon/Icon";
 import "./header.scss";
-// import {Link} from 'react-router';
+import {Link} from 'react-router';
+import {browserHistory} from 'react-router';
 
 class Header extends Component {
   constructor(props) {
     super(props);
     this.handleClickLogo = this.handleClickLogo.bind(this);
-    this.handleLogin = this.handleLogin.bind(this);
-  }
-
-  handleLogin() {
-    this.props.actions.showLoginPage(true);
-    this.props.actions.getSource("");
   }
 
   handleClickLogo() {
-    this.props.actions.showRequestDemoPage(false);
-    this.props.actions.showLoginPage(false);
+    this.props.actions.clickMenu("");
+    browserHistory.push("/");
     let posX = window.pageXOffset;
     let posY = window.pageYOffset;
-    let incrementer = .01;
+    let incrementer = 8;
     const backHome = setInterval(frame, 8);
 
     function frame() {
@@ -37,7 +31,7 @@ class Header extends Component {
         clearInterval(backHome);
       } else {
         incrementer += 1;
-        posY -= Math.pow(1.2, incrementer);
+        posY -= Math.pow(1.05, incrementer);
         window.scrollTo(posX, posY);
       }
     }
@@ -55,27 +49,25 @@ class Header extends Component {
           <Logo onClick={this.handleClickLogo}/>
         </div>
         <div className="col-xs-4 col-sm-4 rightAction">
-          <Icon icon={loginIcon} text={"LOG IN"} posIcon={"right"}
-                onClick={this.handleLogin}
-          />
+          <Link to={"login"}> <Icon icon={loginIcon} text={"LOG IN"} posIcon={"right"}
+          /></Link>
         </div>
       </nav>
     );
   }
 }
 
-
 Header.propTypes = {
   leftSide: PropTypes.array,
   middleSide: PropTypes.element,
   rightSide: PropTypes.array,
-  onClickLogo: PropTypes.func,
   actions:PropTypes.object
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(Object.assign({},sourceActions, showingPageActions), dispatch)
-  }
+    actions: bindActionCreators(menuActions, dispatch)
+  };
 }
+
 export default connect(null, mapDispatchToProps)(Header);

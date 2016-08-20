@@ -3,11 +3,12 @@
  */
 import React, {PropTypes} from "react";
 import Button from "../button/Button";
+import {Link} from "react-router";
 import "./FeatureItem.scss";
 
 const FeatureItem = (props) => {
   const texBox = (
-    <div  className="col-sm-6 col-md-6 col-xs-12">
+    <div className="col-sm-6 col-md-6 col-xs-12">
       <h3 className="fl-feature-headline">
         {props.headline}
       </h3>
@@ -15,7 +16,7 @@ const FeatureItem = (props) => {
         {props.content}
       </div>
       <div className="fl-feature-btn">
-        <Button text="REQUEST A DEMO" width={180} onClick={props.onClick}/>
+        <Link to={'register-features'}><Button text="REQUEST A DEMO" width={180}/></Link>
       </div>
     </div>
   );
@@ -27,7 +28,7 @@ const FeatureItem = (props) => {
   );
   return (
     <div className="fl-feature-item row">
-      {getOddorEven(props.index) ? <div>{texBox} {imgBox} </div>: <div>{imgBox}{texBox}</div>}
+      {getOddorEven(props.index) ? <div>{texBox} {imgBox} </div> : <div>{imgBox}{texBox}</div>}
     </div>
   );
 };
@@ -36,8 +37,7 @@ FeatureItem.propTypes = {
   index: PropTypes.number,
   urlImg: PropTypes.string,
   headline: PropTypes.string,
-  content: PropTypes.string,
-  onClick:PropTypes.func
+  content: PropTypes.string
 };
 
 const getOddorEven = (number) => {

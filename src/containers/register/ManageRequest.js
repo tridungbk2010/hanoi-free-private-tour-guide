@@ -6,12 +6,11 @@ import SubscribeForm from "../../components/subcrible-form/SubscribeForm";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import * as sendInBlueActions from "../../actions/sendInBlueActions";
-import * as showingPageActions from "../../actions/showingPageActions";
 import * as textValidator from '../../constants/validationText';
 
 class ManageRequest extends Component {
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
     this.state = {
       dataForm: {
         firstName: '',
@@ -117,21 +116,8 @@ class ManageRequest extends Component {
   }
 
   redirect() {
-    console.log("dataForm", this.state.dataForm);
-    this.props.actions.showRequestSuccessPage(true);
-    this.setState({
-      saving: false,
-      dataForm: {
-        firstName: '',
-        lastName: '',
-        email: '',
-        phoneNumber: '',
-        companyName: '',
-        companySize: '',
-        country: ''
-      }
-    });
-
+    this.context.router.push('/thankyou');
+    this.setState({saving: false});
   }
 
   render() {
@@ -153,6 +139,10 @@ ManageRequest.propTypes = {
   source:PropTypes.string
 };
 
+ManageRequest.contextTypes = {
+  router: PropTypes.object
+};
+
 function validateEmail(email) {
   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
@@ -166,7 +156,7 @@ function validatePhoneNumber(dataInput) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(Object.assign({},showingPageActions, sendInBlueActions), dispatch)
+    actions: bindActionCreators(sendInBlueActions, dispatch)
   }
 }
 

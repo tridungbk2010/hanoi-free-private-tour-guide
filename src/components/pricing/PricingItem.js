@@ -5,6 +5,7 @@ import React, {PropTypes} from "react";
 import Module from "./Module";
 import PricingHeader from "./PricingHeader";
 import Price from "./Price";
+import { Link} from 'react-router';
 import Button from "../../components/button/Button";
 import "./PricingItem.scss";
 
@@ -28,7 +29,7 @@ const PricingItem = (props)=> {
               })}
           </div>
           <div>
-           <Button autoWidth={true} text={props.buttonText} onClick={props.onClick}/>
+            <Link to={"register-pricing"}><Button autoWidth={true} text={props.buttonText} /></Link>
           </div>
           <div>
             <Price price={props.price}/>
@@ -44,8 +45,7 @@ PricingItem.propTypes = {
   description: PropTypes.string,
   modules: PropTypes.array,
   buttonText: PropTypes.string,
-  price: PropTypes.number,
-  onClick:PropTypes.func
+  price: PropTypes.number
 };
 
 export default PricingItem;

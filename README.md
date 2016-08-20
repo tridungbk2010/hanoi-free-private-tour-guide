@@ -1,14 +1,9 @@
-# hanoifreeprivatetourguide.com
+# flowzone.cloud
 
-Hanoi free private tour guide does free guiding with the aims of:
-** Supplying free services for foreign visitors.
-**Advertising Vietnam’s beauty: humans, sceneries, customs, cultures, cuisine.
-**Chances for Vietnamese young generation to meet and learn from global citizens
-** We not only show you my country but also learn more from you
+Web application to help companies screen for culture fit, and then motivate and retain their best talent. 
+
 
 ## Get Started
-1. **Clone the project**. `git clone https://github.com/tridungbk2010/hanoi-free-private-tour-guide.git`.  
-2. **Install Node latest version**. `https://nodejs.org/en/`
-3. **Install Node packages**. `npm install`
-4. **Run the app**. `npm start -s` for dev version 
-5. **Run the app production**. `npm run build` 
+1. **Clone the project**. `git clone https://github.com/bodonyid/flowzone.cloud.git`.  
+2. **Install Node packages**. `npm install`
+3. **Run the app**. `npm start` 

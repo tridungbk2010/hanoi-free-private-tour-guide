@@ -2,6 +2,7 @@
 
 .field{
   position: relative;
+  font-weight: 400;
   .form-control{
     height: 40px !important;
     &:focus{
@@ -38,6 +39,7 @@
   }
   .fl-input{
     padding-left: 28px;
+
   }
   input:-webkit-autofill,
   textarea:-webkit-autofill,

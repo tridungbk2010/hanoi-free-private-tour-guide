@@ -6,19 +6,13 @@ import Layout from "../../components/layout/Layout";
 import TextInput from "../../components/input-field/TextInput";
 import Button from "../../components/button/Button";
 import {Link} from "react-router";
-import {connect} from "react-redux";
-import {bindActionCreators} from "redux";
-import * as showingPageActions from "../../actions/showingPageActions";
+// import {connect} from "react-redux";
+// import {bindActionCreators} from "redux";
 import "./Login.scss";
 
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.handleRegister = this.handleRegister.bind(this);
-  }
-
-  handleRegister() {
-    //this.props.actions.showRegisterPage(true);
   }
 
   render() {
@@ -37,7 +31,7 @@ class Login extends Component {
             <div className="fl-login-forgot-pass">Forgot your password?</div>
           </Link>
           <div className="fl-login-no-account">Don't have an account yet?</div>
-          <Button onClick={this.handleRegister} autoWidth={true} text={"REGISTER"}/>
+          <Link to={"request-demo"}><Button autoWidth={true} text={"REGISTER"}/></Link>
         </form>
       }/>
     );
@@ -48,9 +42,4 @@ Login.propTypes = {
   actions: PropTypes.object
 };
 
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(showingPageActions, dispatch)
-  }
-}
-export default connect(null, mapDispatchToProps)(Login);
+export default Login;

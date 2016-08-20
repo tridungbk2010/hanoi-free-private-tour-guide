@@ -3,10 +3,8 @@
  */
 import React, {Component, PropTypes} from "react";
 import FeatureItem from '../../components/features/FeatureItem';
-import {connect} from "react-redux";
-import {bindActionCreators} from "redux";
-import * as showingPageActions from "../../actions/showingPageActions";
-import * as sourceActions from "../../actions/sourceActions";
+// import {connect} from "react-redux";
+// import {bindActionCreators} from "redux";
 import './Features.scss';
 import {DATE_FEATURES} from '../../constants/dataConst';
 
@@ -41,9 +39,4 @@ Features.propTypes = {
   actions:PropTypes.object
 };
 
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(Object.assign({},sourceActions,showingPageActions), dispatch)
-  };
-}
-export default connect(null, mapDispatchToProps)(Features);
+export default Features;

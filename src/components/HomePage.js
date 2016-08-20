@@ -6,12 +6,8 @@ import TeamMember from "../containers/team-member/TeamMember";
 import Pricing from "../components/pricing/Pricing";
 import Contact from "../components/contact/Contact";
 import Footer from "../components/common/Footer";
-import Login from "../containers/login/Login";
-import Register from "../containers/register/RequestDemo";
-import RequestSuccess from "../containers/register/RequestSuccess";
 import {connect} from "react-redux";
-import {Element} from "react-scroll";
-// import {browserHistory} from "react-router";
+import {Element, scroller} from "react-scroll";
 // import {Link} from "react-router";
 
 
@@ -20,35 +16,55 @@ class HomePage extends Component {
     super(props);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if ((nextProps.menu !== this.props.menu) && nextProps.menu !== "") {
+      scroller.scrollTo(nextProps.menu, {
+        duration: 1000,
+        delay: 0,
+        offset: -60,
+        smooth: true,
+        isDynamic: true
+      });
+    }
+  }
+
+  componentDidMount() {
+    this.props.menu && scroller.scrollTo(this.props.menu, {
+      duration: 1000,
+      delay: 0,
+      offset: -60,
+      smooth: true
+    });
+  }
+
   render() {
     return (
       <div className="homePage">
-        {this.props.showLoginPage &&  <Login />}
-        {this.props.showRequestDemoPage &&  <Register />}
-        {this.props.showSuccessPage &&  <RequestSuccess />}
         <Cover />
         <div className="bodyContent">
           <BoxIntro />
         </div>
 
         <Element name="Features" className="element">
-          <div className="bodyContent">
+          <div className="bodyContent" id="Features">
             <Features />
           </div>
         </Element>
 
         <Element name="Team" className="element">
-          <div className="bodyContent">
+          <div className="bodyContent" id="Team">
             <TeamMember />
           </div>
         </Element>
 
         <Element name="Pricing" className="element">
-          <Pricing />
+          <div id="Pricing">
+            <Pricing />
+          </div>
         </Element>
 
         <Element name="Contact" className="element">
-          <div className="bodyContent">
+          <div className="bodyContent" id="Contact">
             <Contact />
           </div>
         </Element>
@@ -59,16 +75,12 @@ class HomePage extends Component {
 }
 
 HomePage.propTypes = {
-  showLoginPage: PropTypes.bool,
-  showRequestDemoPage: PropTypes.bool,
-  showSuccessPage: PropTypes.bool
+  menu: PropTypes.string
 };
 
 function mapStateToProps(state) {
   return {
-    showLoginPage: state.showingPageReducer,
-    showRequestDemoPage:state.showRequestDemoReducer,
-    showSuccessPage:state.showingRequestSuccessReducer
+    menu: state.menuReducer
   };
 }
 

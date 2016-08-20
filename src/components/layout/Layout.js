@@ -8,7 +8,7 @@ class Layout extends Component {
   render() {
     return (
       <div className="fl-layout">
-        <div className="fl-layout-wrap-form">
+        <div className="fl-layout-wrap-form" >
           {this.props.children}
         </div>
       </div>
@@ -17,7 +17,8 @@ class Layout extends Component {
 }
 
 Layout.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.element,
+  width:PropTypes.number
 };
 
 export default Layout;
