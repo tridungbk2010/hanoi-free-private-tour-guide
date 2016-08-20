@@ -12,7 +12,7 @@ class Cover extends Component {
       <section className="flCover">
         <div className="subscribeForm">
           <div className="fl-cover-title-form">
-            <Title content={"Assessments that boost employee engagement, scientifically"}
+            <Title content={"Book Free tour"}
                    color={"#fff"}
                    fontWeight={true}
                    size={"medium"}

@@ -10,9 +10,10 @@
   background-color: #fff;
   top:0;
   left:0;
-  .flowLogo {
+  .middle-action {
     text-align: center;
     height: 60px;
+    display: inline-block;
   }
   .leftAction {
     text-align: left;
@@ -20,8 +21,10 @@
   }
   .rightAction {
     text-align: right;
+    height: 60px;
     line-height: 60px;
     a{
+      display: inline-block;
       text-decoration: none !important;
     }
   }

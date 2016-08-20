@@ -2,7 +2,7 @@
 
 .footer{
   position: relative;
-  background-color: $DARK_NAVY;
+  background-color: $DARK_CYAN;
   height: 90px;
   line-height:90px;
 
@@ -10,7 +10,7 @@
     color: #fff;
     padding-left:10px ;
     &:hover{
-      color: $YELLOW;
+      color: $GREEN;
       text-decoration: none;
     }
   }
@@ -20,7 +20,7 @@
     left: 47%;
     &:hover{
       text-decoration: none;
-      color: $YELLOW;
+      color: $GREEN;
     }
   }
 }

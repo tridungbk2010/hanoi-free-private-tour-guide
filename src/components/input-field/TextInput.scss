@@ -20,7 +20,7 @@
   .fl-alert{
     font-size: 13px;
     font-weight: 300;
-    color:$LIGHT_RED;
+    color:$PINK;
   }
   .icon-in-form{
     font-family: 'FontAwesome', sans-serif;
@@ -34,7 +34,7 @@
   }
   .has-error-icon{
     i{
-      color:$LIGHT_RED
+      color:$PINK;
     }
   }
   .fl-input{
@@ -52,5 +52,5 @@
 }
 
 .has-error .form-control{
-  border-color: $LIGHT_RED !important;
+  border-color: $PINK !important;
 }

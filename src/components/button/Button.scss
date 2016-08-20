@@ -7,13 +7,12 @@
   text-align: center;
   border-radius: $BORDER_RADIUS;
   height: $BUTTON_HEIGHT;
-  background-color: $LIGHT_RED;
+  background-color: $GREEN;
   border: none;
   font-weight: 400;
-  font-size: 16px;
   color:#fff;
   &:hover{
-    background-color:$DARK_RED;
+    background-color:$DARK_CYAN;
     cursor: pointer;
   }
   &:active{
@@ -22,6 +21,9 @@
   &:focus{
     outline:none;
     border:none;
+  }
+  .fl-icon-in-btn{
+    padding-left: 5px;
   }
 }
 

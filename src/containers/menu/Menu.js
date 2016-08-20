@@ -82,10 +82,8 @@ class Menu extends Component {
   }
 
   render() {
-    const urlIconMenu = require("../../images/icon-menu.svg");
-    const urlIconExit = require("../../images/icon-exit.svg");
-    const menuIcon = <img src={urlIconMenu}/>;
-    const closeMenuIcon = <img src={urlIconExit}/>;
+    const menuIcon = <i className="fa fa-bars fa-2x" aria-hidden="true" />;
+    const closeMenuIcon = <i className="fa fa-times fa-2x" aria-hidden="true" />;
     const listMenuClassName = this.state.isShowing ? "listMenu showMenu " : "listMenu";
     return (
       <div className="flMenu">

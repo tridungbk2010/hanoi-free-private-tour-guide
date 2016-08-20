@@ -5,29 +5,21 @@ import React, {Component, PropTypes} from "react";
 import BoxIntroItem from "./BoxIntroItem";
 import './BoxIntro.scss'
 
-const iconScreen = require("../../images/icon-srceen.svg");
-const iconChart = require("../../images/icon-chart.svg");
-const iconSwim = require("../../images/icon-swim.svg");
 const INTRO_DATA = [
   {
-    icon: (<img src={iconScreen} />),
-    headLine: "SCREEN FOR CULTURE FIT",
-    content: "Startups need people who will walk the extra mile every day to make the company a success. " +
-    "FLOW helps you identify the candidates who are most likely to thrive in and enrich your culture."
+    icon: <i className="fa fa-users fa-3x" aria-hidden="true" style={{color:'#ed1064'}}/>,
+    headLine: "200+ Members",
+    content: "200 members are always ready to pick up guests."
   },
   {
-    icon: (<img src={iconChart} />),
-    headLine: "IMPROVE ENGAGEMENT",
-    content: "FLOW is the only tool that measures both your people's motivators and their engagement. " +
-    "This way you can focus on the metrics that matter, " +
-    "meaningfully improving engagement without wasting valuable resources."
+    icon: <i className="fa fa-comments fa-3x" aria-hidden="true" style={{color:'#f7931d'}}/>,
+    headLine: "300+ Tours have been taken",
+    content: "We are heading to 1000 tours within 2016."
   },
   {
-    icon: (<img src={iconSwim} />),
-    headLine: "PREVENT UNWANTED TURNOVER",
-    content: "Retaining your best people is the key to creating a scalable culture. " +
-    "FLOW's predictive algorithms help you forecast attrition risk and identify " +
-    "the most effective preventive measures. "
+    icon: <i className="fa fa-flag fa-3x" aria-hidden="true" style={{color:'#38b449'}}/>,
+    headLine: "40+ Nations",
+    content: "40+ nations are where our guests come from. "
   }
 ];
 

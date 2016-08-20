@@ -1,0 +1,16 @@
+
+@import "../../styles/colors";
+
+.hn-date-picker {
+  padding-bottom: 15px;
+  .today {
+    background-color: $ORANGE;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: #fff;
+  }
+  .bootstrap-datetimepicker-widget{
+    top: 90px !important;
+    right: 40px;
+  }
+}

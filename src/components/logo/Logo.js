@@ -6,7 +6,7 @@ import {IndexLink} from "react-router";
 import "./logoStyle.scss";
 
 const Logo = (props) => {
-  const urlIconLogo = require("../../images/flow-logo.svg");
+  const urlIconLogo = require("../../images/logo-tourguide2.svg");
   return (
     <IndexLink to="/" activeClassName="active">
     <span onClick={props.onClick} className="logoSVG">

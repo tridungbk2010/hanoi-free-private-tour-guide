@@ -8,6 +8,7 @@ import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import * as menuActions from '../../actions/menuActions';
 import Icon from "../icon/Icon";
+import Button from '../../components/button/Button';
 import "./header.scss";
 import {Link} from 'react-router';
 import {browserHistory} from 'react-router';
@@ -38,19 +39,17 @@ class Header extends Component {
   }
 
   render() {
-    const urlIconMenu = require("../../images/fl-icon-login.svg");
-    const loginIcon = <img src={urlIconMenu}/>;
+    const iconBtnBookTour = <i className="fa fa-arrow-circle-right" aria-hidden="true" />;
     return (
       <nav className="container-fluid flowHeader">
         <div className="col-xs-4 col-sm-4 leftAction">
           <Menu />
         </div>
-        <div className="col-xs-4 col-sm-4 flowLogo">
+        <div className="col-xs-4 col-sm-4 middle-action">
           <Logo onClick={this.handleClickLogo}/>
         </div>
         <div className="col-xs-4 col-sm-4 rightAction">
-          <Link to={"login"}> <Icon icon={loginIcon} text={"LOG IN"} posIcon={"right"}
-          /></Link>
+          <Link to={"login"}><Button text={"Book Free Tour"}  icon={iconBtnBookTour}/></Link>
         </div>
       </nav>
     );

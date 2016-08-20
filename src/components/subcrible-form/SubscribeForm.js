@@ -4,7 +4,9 @@
 import React, {Component, PropTypes} from "react";
 import TextInput from "../input-field/TextInput";
 import SelectInput from "../input-field/SelectInput";
+import DatePicker from "../input-field/DatePicker";
 import CheckBox from "../input-field/CheckBox";
+import Recaptcha from "react-recaptcha";
 import "./SubscribeField.scss";
 import {COUNTRY_DATA, DATA_COMPANY_SIZE} from "../../constants/dataConst";
 
@@ -14,34 +16,47 @@ class SubscribeForm extends Component {
   }
 
   render() {
-    const iconUser = <i className="fa fa-user fa-lg" aria-hidden="true"/>;
+    //const iconUser = <i className="fa fa-user fa-lg" aria-hidden="true"/>;
     const iconMail = <i className="fa fa-envelope fa-lg" aria-hidden="true"/>;
     const iconPhone = <i className="fa fa-phone fa-lg" aria-hidden="true"/>;
     const iconBuilding = <i className="fa fa-building-o fa-lg" aria-hidden="true"/>;
     const iconGroup = <i className="fa fa-users fa-lg" aria-hidden="true"/>;
     const iconMap = <i className="fa fa-map-marker fa-lg" aria-hidden="true"/>;
 
-    const {dataForm, onChange, onSave, errors, saving} = this.props;
+    const {dataForm, onChange, onSave, errors, saving, onloadCallback, verifyCallback} = this.props;
     return (
       <div className="fl-form-subscribe container-fluid">
         <div className="col-md-6 col-sm-6 col-xs-12 fl-form">
           <form>
+            <div className="fl-horizontal-field">
+              <SelectInput icon={iconMap}
+                           onChange={onChange}
+                           error={errors.country}
+                           name="country"
+                           value={dataForm.country}
+                           defaultOption="Tour name"
+                           options={COUNTRY_DATA}
+                           placeholder="Tour name"/>
+
+              <DatePicker />
+              <TextInput name="lastName"
+                         onChange={onChange}
+                         value={dataForm.lastName}
+                         error={errors.lastName}
+                         placeholder="Pickup address"/>
+            </div>
             <div className="fl-vertical-field">
-              <div>
-                <TextInput icon={iconUser}
-                           name="firstName"
-                           onChange={onChange}
-                           value={dataForm.firstName}
-                           error={errors.firstName}
-                           placeholder="First Name"/>
-              </div>
-              <div>
-                <TextInput name="lastName"
-                           onChange={onChange}
-                           value={dataForm.lastName}
-                           error={errors.lastName}
-                           placeholder="Last Name"/>
-              </div>
+              <TextInput name="lastName"
+                         onChange={onChange}
+                         value={dataForm.lastName}
+                         error={errors.lastName}
+                         placeholder="Number of adults"/>
+
+              <TextInput name="lastName"
+                         onChange={onChange}
+                         value={dataForm.lastName}
+                         error={errors.lastName}
+                         placeholder="Number of kids"/>
             </div>
             <div className="fl-horizontal-field">
               <div>
@@ -86,7 +101,12 @@ class SubscribeForm extends Component {
                            options={COUNTRY_DATA}
                            placeholder="Country"/>
             </div>
-
+            <Recaptcha
+              sitekey="6LcCEygTAAAAAMCoaaLOBscssqO7C0RME-rv6Ek8"
+              render="explicit"
+              verifyCallback={verifyCallback}
+              onloadCallback={onloadCallback}
+            />
             <div className="fl-checkbox">
               <CheckBox
                 ref="checkbox"
@@ -96,10 +116,10 @@ class SubscribeForm extends Component {
               />
             </div>
             <div className="btn-save-form">
-              {saving &&<i className="fa fa-spinner fa-spin fa-lg fa-fw saving" />}
+              {saving && <i className="fa fa-spinner fa-spin fa-lg fa-fw saving"/>}
               <input
                 type="submit"
-                value={saving ? "SAVING" : "REQUEST A DEMO"}
+                value={saving ? "SAVING" : "BOOK FREE TOUR"}
                 className="btn btn-primary fl-cover-submit-btn"
                 onClick={onSave}/>
             </div>
@@ -117,7 +137,9 @@ SubscribeForm.propTypes = {
   onSave: PropTypes.func,
   saving: PropTypes.bool,
   dataForm: PropTypes.object,
-  errors: PropTypes.object
+  errors: PropTypes.object,
+  onloadCallback: PropTypes.func,
+  verifyCallback: PropTypes.func
 };
 
 export default SubscribeForm;

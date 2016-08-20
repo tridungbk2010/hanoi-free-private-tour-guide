@@ -16,7 +16,7 @@ const FeatureItem = (props) => {
         {props.content}
       </div>
       <div className="fl-feature-btn">
-        <Link to={'register-features'}><Button text="REQUEST A DEMO" width={180}/></Link>
+        <Link to={'register-features'}><Button text="BOOK FREE TOUR" width={180}/></Link>
       </div>
     </div>
   );

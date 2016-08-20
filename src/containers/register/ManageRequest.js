@@ -28,6 +28,8 @@ class ManageRequest extends Component {
 
     this.updateCourseState = this.updateCourseState.bind(this);
     this.handleSave = this.handleSave.bind(this);
+    this.onloadCallback = this.onloadCallback.bind(this);
+    this.verifyCallback = this.verifyCallback.bind(this);
   }
 
   updateCourseState(event) {
@@ -120,6 +122,12 @@ class ManageRequest extends Component {
     this.setState({saving: false});
   }
 
+  onloadCallback(){
+    console.log('Done!!!!');
+  }
+  verifyCallback(response){
+    console.log("verify capcha Callback",response);
+  }
   render() {
     return (
       <SubscribeForm
@@ -128,6 +136,8 @@ class ManageRequest extends Component {
         errors={this.state.errors}
         onSave={this.handleSave}
         saving={this.state.saving}
+        onloadCallback={this.onoadCallback}
+        verifyCallback={this.verifyCallback}
       />
     );
   }

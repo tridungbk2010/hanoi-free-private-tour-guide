@@ -320,7 +320,7 @@ export const DATA_PRICING = [
 
 export const DATE_FEATURES = [
   {
-    urlImg: require("../images/flow-chart1.svg"),
+    urlImg: require("../images/photo-default.png"),
     headline: "Proprietary psychological tests",
     content: "FLOW is powered by two proprietary psychological tests, " +
     "the FLOW Motivator Survey and the FLOW Engagement Survey. " +
@@ -331,7 +331,7 @@ export const DATE_FEATURES = [
     "these motivators can be realized in people's work environments."
   },
   {
-    urlImg: require("../images/flow-chart2.svg"),
+    urlImg: require("../images/photo-default.png"),
     headline: "Benchmarked, actionable reports",
     content: "FLOW gives you access to both individual and company-level reports. " +
     "Reports are highly actionable, with specific, prioritized recommendations " +
@@ -340,7 +340,7 @@ export const DATE_FEATURES = [
     "so you can see how your company compares to other employers."
   },
   {
-    urlImg: require("../images/flow-chart3.svg"),
+    urlImg: require("../images/photo-default.png"),
     headline: "Predictive analytics",
     content: "FLOW's predictive algorithms will help you to objectively and analytically " +
     "assess culture fit in your hiring process, to identify the measures that will " +
