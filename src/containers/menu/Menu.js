@@ -3,7 +3,7 @@
  */
 import React, {Component, PropTypes} from "react";
 import Icon from "../../components/icon/Icon";
-import MenuItem from "./MenuItem";
+// import MenuItem from "./MenuItem";
 import Overlay from "../../components/common/Overlay";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
@@ -13,15 +13,6 @@ import {browserHistory} from "react-router";
 // import {scroller} from "react-scroll";
 import "./Menu.scss";
 const enhanceWithClickOutside = require('react-click-outside');
-
-const MENU_DATA = [
-  {name: 'Features', id: 1},
-  {name: 'Team', id: 2},
-  {name: 'Pricing', id: 3},
-  {name: 'Contact', id: 4},
-  {name: 'Login', id: 5},
-  {name: 'Blog', id: 6}
-];
 
 class Menu extends Component {
   constructor(props, context) {
@@ -33,23 +24,14 @@ class Menu extends Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.handleOverlay = this.handleOverlay.bind(this);
+    this.handleClickMennu = this.handleClickMennu.bind(this);
   }
 
-  handleScroll(menuName) {
-    //window.location.hash = menuName;
-    // browserHistory.push("#" + menuName);
-    this.context.router.push('#'+menuName);
+  handleClickMennu(menuName) {
+    browserHistory.push(menuName);
     this.setState({
-      isShowing: !this.state.isShowing
+      isShowing: false
     });
-    switch (menuName) {
-      case "Login":
-        return browserHistory.push("login");
-      case "Blog":
-        return window.open("http://52.220.33.209/");
-      default:
-        return this.props.actions.clickMenu(menuName);
-    }
   }
 
   handleClick() {
@@ -57,17 +39,6 @@ class Menu extends Component {
       isShowing: !this.state.isShowing
     });
   }
-
-  // handleClickPopUp(menuName) {
-  //   if(menuName === "Login"){
-  //     browserHistory("/login");
-  //   }else{
-  //     window.open("http://52.220.33.209/")
-  //   }
-  //   this.setState({
-  //     isShowing: false
-  //   });
-  // }
 
   handleOverlay() {
     this.setState({
@@ -90,9 +61,12 @@ class Menu extends Component {
         <Icon icon={this.state.isShowing ? closeMenuIcon : menuIcon} text={"MENU"} onClick={this.handleClick}/>
         <div className={listMenuClassName}>
           <ul className="ulListMenu">
-            {MENU_DATA.map((menu, index) =>
-              <MenuItem key={index} onClick={this.handleScroll.bind(this, menu.name)} text={menu.name}/>
-            )}
+            <li onClick={() => this.handleClickMennu("/")} className="menuItem">Home</li>
+            <li onClick={() => this.handleClickMennu("about")} className="menuItem">About Us</li>
+            <li className="menuItem">Tour name</li>
+            <li className="menuItem">Book Free Tour</li>
+            <li className="menuItem">Blog</li>
+            <li className="menuItem">Contacs</li>
           </ul>
           <div className="menu-social-icon">
             <NetworkIcon size={"small"}/>

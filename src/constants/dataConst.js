@@ -320,8 +320,8 @@ export const DATA_PRICING = [
 
 export const DATE_FEATURES = [
   {
-    urlImg: require("../images/photo-default.png"),
-    headline: "Proprietary psychological tests",
+    urlImg: require("../images/tourguide-intro1.jpg"),
+    headline: "Supplying free services for foreign visitors",
     content: "FLOW is powered by two proprietary psychological tests, " +
     "the FLOW Motivator Survey and the FLOW Engagement Survey. " +
     "Both tests were developed by a team of workplace psychologists and " +
@@ -331,8 +331,8 @@ export const DATE_FEATURES = [
     "these motivators can be realized in people's work environments."
   },
   {
-    urlImg: require("../images/photo-default.png"),
-    headline: "Benchmarked, actionable reports",
+    urlImg: require("../images/tg4.jpg"),
+    headline: "Advertising Vietnam’s beauty: humans, sceneries, customs, cultures, cuisine.",
     content: "FLOW gives you access to both individual and company-level reports. " +
     "Reports are highly actionable, with specific, prioritized recommendations " +
     "for follow-up measures that help you make the most of your engagement initiatives. " +
@@ -340,8 +340,8 @@ export const DATE_FEATURES = [
     "so you can see how your company compares to other employers."
   },
   {
-    urlImg: require("../images/photo-default.png"),
-    headline: "Predictive analytics",
+    urlImg: require("../images/tg6.jpg"),
+    headline: "Chances for Vietnamese young generation to meet and learn from global citizens",
     content: "FLOW's predictive algorithms will help you to objectively and analytically " +
     "assess culture fit in your hiring process, to identify the measures that will " +
     "most effectively improve employee engagement, and to forecast and prevent unwanted turnover."
@@ -367,5 +367,29 @@ export const DATA_ADDRESS = [
     national: "United States",
     address: ["582 Market Street, Suite 204","San Francisco","CA 94104"],
     urlMap:"https://www.google.com/maps/embed/v1/place?q=582+Market+Street,+Suite+204+San+Francisco+CA+94104+United+States&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"
+  }
+];
+
+export const DATA_COMMENTS = [
+  {
+    quotation:"Free tours of Hanoi - because students want to gain an insight into your culture, " +
+    "share their culture and practise their english ... fantastic. " +
+    "Three of us, including our 13 y old were met at our hotel by Huong and her young assistant " +
+    "(who was in-training) .. Smiles and greetings all round - I immediately knew we were in for...",
+    urlAvatar: require("../images/guest1.jpg"),
+    name:"Anne Bertucio"
+  },
+  {
+    quotation:"Solving problems and making lives easier with code is really exciting. " +
+    "Thanks for providing great material and making a real change in people’s lives!",
+
+    urlAvatar: require("../images/guest2.jpg"),
+    name:"Matt Orahood"
+  },
+  {
+    quotation:"Code School allowed me to leave my dead-end job of 11 years and find a great job as a front-end/UI developer. " +
+    "I still keep my subscription active and enjoy the variety of courses you offer",
+    urlAvatar: require("../images/guest3.jpg"),
+    name:"James Olguin"
   }
 ];

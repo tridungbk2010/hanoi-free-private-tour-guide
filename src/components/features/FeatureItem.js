@@ -2,8 +2,8 @@
  * Created by Chris Ho on 8/2/2016.
  */
 import React, {PropTypes} from "react";
-import Button from "../button/Button";
-import {Link} from "react-router";
+// import Button from "../button/Button";
+// import {Link} from "react-router";
 import "./FeatureItem.scss";
 
 const FeatureItem = (props) => {
@@ -14,9 +14,6 @@ const FeatureItem = (props) => {
       </h3>
       <div className="fl-feature-content">
         {props.content}
-      </div>
-      <div className="fl-feature-btn">
-        <Link to={'register-features'}><Button text="BOOK FREE TOUR" width={180}/></Link>
       </div>
     </div>
   );

@@ -1,0 +1,26 @@
+.handle-book{
+  background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.6)),url("../../images/cover.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height:calc(100vh);
+  .ct-form{
+    margin: 25px auto;
+    width: 320px;
+    .form-book-tour{
+      .form-inline{
+        >div:nth-child(1){
+        }
+        >div:nth-child(2){
+          width: calc(100% - 70px);
+          margin-left:10px;
+          input{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+

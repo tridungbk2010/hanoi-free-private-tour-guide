@@ -7,7 +7,7 @@ import Menu from "../../containers/menu/Menu";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import * as menuActions from '../../actions/menuActions';
-import Icon from "../icon/Icon";
+// import Icon from "../icon/Icon";
 import Button from '../../components/button/Button';
 import "./header.scss";
 import {Link} from 'react-router';
@@ -49,7 +49,7 @@ class Header extends Component {
           <Logo onClick={this.handleClickLogo}/>
         </div>
         <div className="col-xs-4 col-sm-4 rightAction">
-          <Link to={"login"}><Button text={"Book Free Tour"}  icon={iconBtnBookTour}/></Link>
+          <Link to={"book-tour"}><Button text={"Book Free Tour"}  icon={iconBtnBookTour}/></Link>
         </div>
       </nav>
     );

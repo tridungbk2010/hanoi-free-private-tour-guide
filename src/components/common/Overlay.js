@@ -6,16 +6,20 @@ import './Overlay.scss';
 
 class Overlay extends Component {
   render() {
+    const {onClick, children} = this.props;
     return (
-      <div className="flOverlay" onClick={this.props.onClick}>
-
+      <div className="overlay-layout" onClick={onClick}>
+        <div className="children-in-layout">
+          {children}
+        </div>
       </div>
     );
   }
 }
 
 Overlay.propTypes = {
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  children:PropTypes.element
 };
 
 export default Overlay;

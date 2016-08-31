@@ -5,10 +5,9 @@ import React, {Component, PropTypes} from "react";
 import TextInput from "../input-field/TextInput";
 import SelectInput from "../input-field/SelectInput";
 import DatePicker from "../input-field/DatePicker";
-import CheckBox from "../input-field/CheckBox";
 import Recaptcha from "react-recaptcha";
 import "./SubscribeField.scss";
-import {COUNTRY_DATA, DATA_COMPANY_SIZE} from "../../constants/dataConst";
+import {COUNTRY_DATA} from "../../constants/dataConst";
 
 class SubscribeForm extends Component {
   constructor(props) {
@@ -20,7 +19,7 @@ class SubscribeForm extends Component {
     const iconMail = <i className="fa fa-envelope fa-lg" aria-hidden="true"/>;
     const iconPhone = <i className="fa fa-phone fa-lg" aria-hidden="true"/>;
     const iconBuilding = <i className="fa fa-building-o fa-lg" aria-hidden="true"/>;
-    const iconGroup = <i className="fa fa-users fa-lg" aria-hidden="true"/>;
+    // const iconGroup = <i className="fa fa-users fa-lg" aria-hidden="true"/>;
     const iconMap = <i className="fa fa-map-marker fa-lg" aria-hidden="true"/>;
 
     const {dataForm, onChange, onSave, errors, saving, onloadCallback, verifyCallback} = this.props;
@@ -44,6 +43,12 @@ class SubscribeForm extends Component {
                          value={dataForm.lastName}
                          error={errors.lastName}
                          placeholder="Pickup address"/>
+              <TextInput icon={iconMail}
+                         name="email"
+                         value={dataForm.email}
+                         error={errors.email}
+                         onChange={onChange}
+                         placeholder="Full name"/>
             </div>
             <div className="fl-vertical-field">
               <TextInput name="lastName"
@@ -67,30 +72,11 @@ class SubscribeForm extends Component {
                            onChange={onChange}
                            placeholder="email@email.com"/>
               </div>
-              <div>
-                <TextInput icon={iconPhone} name="phoneNumber"
-                           onChange={onChange}
-                           value={dataForm.phoneNumber}
-                           error={errors.phoneNumber}
-                           placeholder="eg:0977825106"/>
-              </div>
-              <div>
-                <TextInput icon={iconBuilding} name="companyName"
-                           onChange={onChange}
-                           value={dataForm.companyName}
-                           error={errors.companyName}
-                           placeholder="Company name"/>
-              </div>
-            </div>
-            <div className="fl-vertical-field">
-              <SelectInput icon={iconGroup}
-                           name="companySize"
-                           onChange={onChange}
-                           value={dataForm.companySize}
-                           error={errors.companySize}
-                           defaultOption="Company size"
-                           options={DATA_COMPANY_SIZE}
-                           placeholder="Company size"/>
+              <TextInput icon={iconPhone} name="phoneNumber"
+                         onChange={onChange}
+                         value={dataForm.phoneNumber}
+                         error={errors.phoneNumber}
+                         placeholder="eg:0977825106"/>
 
               <SelectInput icon={iconMap}
                            onChange={onChange}
@@ -100,6 +86,13 @@ class SubscribeForm extends Component {
                            defaultOption="Country"
                            options={COUNTRY_DATA}
                            placeholder="Country"/>
+
+              <TextInput icon={iconBuilding} name="companyName"
+                         onChange={onChange}
+                         value={dataForm.companyName}
+                         error={errors.companyName}
+                         placeholder="Other request"/>
+
             </div>
             <Recaptcha
               sitekey="6LcCEygTAAAAAMCoaaLOBscssqO7C0RME-rv6Ek8"
@@ -107,14 +100,6 @@ class SubscribeForm extends Component {
               verifyCallback={verifyCallback}
               onloadCallback={onloadCallback}
             />
-            <div className="fl-checkbox">
-              <CheckBox
-                ref="checkbox"
-                name="hrBrief"
-                onChange={onChange}
-                text="Subscribe to our HR research briefs"
-              />
-            </div>
             <div className="btn-save-form">
               {saving && <i className="fa fa-spinner fa-spin fa-lg fa-fw saving"/>}
               <input

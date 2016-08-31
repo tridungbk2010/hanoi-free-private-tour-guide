@@ -9,14 +9,13 @@ import routes from "./routes";
 import "./styles/styles.scss";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/toastr/build/toastr.min.css';
-require('./favicon.ico');
+// require('./favicon.ico');
 
 const store = configureStore();
 
 render(
   <Provider store={store}>
-    <Router history={browserHistory}
-            routes={routes}
+    <Router history={browserHistory} routes={routes}
     />
   </Provider>, document.getElementById('app')
 );

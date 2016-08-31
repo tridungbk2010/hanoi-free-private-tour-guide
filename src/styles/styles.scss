@@ -1,7 +1,6 @@
 /* Variables */
 @import "normalize.scss";
 @import "colors.scss";
-@import "responsive.scss";
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700);
 @import url(http://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css);
 
@@ -55,7 +54,6 @@ td.fuel-savings-label {
 
 a{
   &:focus, &:hover{
-    color: #fff !important;
     text-decoration: none !important;
   }
 }
@@ -83,4 +81,23 @@ input:-ms-input-placeholder {
   height: 100%;
   top:0;
   left: 0;
+}
+
+@media (max-width: 767px) {
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .bodyContent{
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .bodyContent{
+    width: 960px;
+    margin: 0 auto;
+  }
 }

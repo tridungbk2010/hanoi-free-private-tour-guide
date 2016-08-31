@@ -13,14 +13,14 @@
     -webkit-transition: all 0.25s ease;
     transition: .25s ease all;
     top:60px;
+    opacity: 0;
     left:0;
-    background-color:$DARK_CYAN ;
     padding-left: 0 !important;
-    height: 100vh;
   }
   .showMenu{
     top:60px;
     left: 0;
+    opacity:1;
     -webkit-transform: translateX(0);
     transform: translateX(0);
     -webkit-transition: .25s ease all;
@@ -28,19 +28,34 @@
   }
   .ulListMenu{
     padding-top: 10px;
+    text-align: center;
     list-style: none;
     padding-left: 0;
     color: #fff;
     a{
       text-decoration: none;
     }
+    .menuItem {
+      line-height: 50px;
+      box-sizing: border-box;
+      font-size:20px;
+      font-weight: 700;
+      color: #fff;
+      cursor: pointer;
+      &:hover {
+        color: $ORANGE !important;
+      }
+      .active {
+        color: $ORANGE;
+      }
+    }
   }
   .menu-social-icon{
-    margin-left:35px;
+    width: 100%;
+    text-align: center;
     line-height: 0;
   }
 }
-
 
 @media (max-width: 767px) {
   .showMenu{
@@ -54,11 +69,11 @@
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .showMenu{
-    width: 280px;
+    width: 100vw;
   }
 }
 @media (min-width: 1200px) {
   .showMenu{
-    width: 280px;
+    width: 100vw;
   }
 }

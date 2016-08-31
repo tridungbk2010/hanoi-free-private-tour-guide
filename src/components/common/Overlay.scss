@@ -1,13 +1,16 @@
 @import "../../styles/colors";
 
-.flOverlay{
-  position: absolute;
+.overlay-layout{
+  position: fixed;
   top:60px;
   left: 0;
   display: block;
-  width: 100vw;
-  height: 100vh;
-  background-color: $DARK_CYAN;
-  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(27, 117, 187, 1), rgba(56, 180, 73, 0.9));
   z-index: 3;
+  .children-in-layout{
+    width: 320px;
+    margin: 50px auto;
+  }
 }

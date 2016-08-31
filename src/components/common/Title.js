@@ -5,7 +5,7 @@ import React, {PropTypes} from "react";
 
 const Title = (props)=> {
   const styleDiv = {
-    fontSize: props.size === "large" && "48px"
+    fontSize: props.size === "large" && "6.4rem"
     || props.size === "medium" && "26px"
     || props.size === "small" && "16px",
     color: props.color && props.color,

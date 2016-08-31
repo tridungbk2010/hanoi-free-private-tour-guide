@@ -2,7 +2,7 @@
  * Created by Chris Ho on 8/3/2016.
  */
 import React, {PropTypes} from "react";
-import "./TextInput.scss";
+// import "./TextInput.scss";
 
 const TextInput = ({name, onChange, placeholder, value, error, icon}) => {
   let wrapperClass = 'form-group';

@@ -1,13 +1,11 @@
 import React, {PropTypes, Component} from "react";
 import Cover from "./cover/Cover";
-import BoxIntro from "./box-intro/BoxIntro";
+import CommentList from "../containers/comments/CommentList";
 import Features from "./features/Features";
-import TeamMember from "../containers/team-member/TeamMember";
+import OurTour from "../containers/our-tour/OurTour";
 import Pricing from "../components/pricing/Pricing";
 import Contact from "../components/contact/Contact";
 import Footer from "../components/common/Footer";
-import {connect} from "react-redux";
-import {Element, scroller} from "react-scroll";
 // import {Link} from "react-router";
 
 
@@ -16,58 +14,27 @@ class HomePage extends Component {
     super(props);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if ((nextProps.menu !== this.props.menu) && nextProps.menu !== "") {
-      scroller.scrollTo(nextProps.menu, {
-        duration: 1000,
-        delay: 0,
-        offset: -60,
-        smooth: true,
-        isDynamic: true
-      });
-    }
-  }
-
-  componentDidMount() {
-    this.props.menu && scroller.scrollTo(this.props.menu, {
-      duration: 1000,
-      delay: 0,
-      offset: -60,
-      smooth: true
-    });
-  }
-
   render() {
     return (
       <div className="homePage">
         <Cover />
         <div className="bodyContent">
-          <BoxIntro />
+          <CommentList />
         </div>
 
-        <Element name="Features" className="element">
-          <div className="bodyContent" id="Features">
-            <Features />
-          </div>
-        </Element>
+        <div className="bodyContent" id="Features">
+          <Features />
+        </div>
 
-        <Element name="Team" className="element">
-          <div className="bodyContent" id="Team">
-            <TeamMember />
-          </div>
-        </Element>
+        <OurTour />
 
-        <Element name="Pricing" className="element">
-          <div id="Pricing">
-            <Pricing />
-          </div>
-        </Element>
+        <div id="Pricing">
+          <Pricing />
+        </div>
 
-        <Element name="Contact" className="element">
-          <div className="bodyContent" id="Contact">
-            <Contact />
-          </div>
-        </Element>
+        <div className="bodyContent" id="Contact">
+          <Contact />
+        </div>
         <Footer />
       </div>
     );
@@ -78,10 +45,5 @@ HomePage.propTypes = {
   menu: PropTypes.string
 };
 
-function mapStateToProps(state) {
-  return {
-    menu: state.menuReducer
-  };
-}
 
-export default connect(mapStateToProps, null)(HomePage);
+export default HomePage;

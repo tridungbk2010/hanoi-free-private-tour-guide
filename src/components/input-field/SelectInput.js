@@ -2,7 +2,7 @@
  * Created by Chris Ho on 8/3/2016.
  */
 import React, {PropTypes} from "react";
-import "./SelectInput.scss";
+// import "./SelectInput.scss";
 
 const SelectInput = ({name, onChange, defaultOption, value, error, options, icon}) => {
   const classErrorIcon = error?"icon-in-form has-error-icon":"icon-in-form";

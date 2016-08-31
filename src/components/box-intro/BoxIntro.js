@@ -7,17 +7,17 @@ import './BoxIntro.scss'
 
 const INTRO_DATA = [
   {
-    icon: <i className="fa fa-users fa-3x" aria-hidden="true" style={{color:'#ed1064'}}/>,
-    headLine: "200+ Members",
+    icon: <span className="number-circle">200+</span>,
+    headLine: "Members",
     content: "200 members are always ready to pick up guests."
   },
   {
-    icon: <i className="fa fa-comments fa-3x" aria-hidden="true" style={{color:'#f7931d'}}/>,
+    icon: <span className="number-circle">300+</span>,
     headLine: "300+ Tours have been taken",
     content: "We are heading to 1000 tours within 2016."
   },
   {
-    icon: <i className="fa fa-flag fa-3x" aria-hidden="true" style={{color:'#38b449'}}/>,
+    icon: <span className="number-circle">40+</span>,
     headLine: "40+ Nations",
     content: "40+ nations are where our guests come from. "
   }
@@ -29,11 +29,13 @@ class BoxIntro extends Component {
   }
 
   render() {
+    const {textColor} = this.props;
     return (
       <div className="fl-box-intro container-fluid">
         {
           INTRO_DATA.map((data, id) =>
             <BoxIntroItem
+              textColor={textColor}
               key={id}
               icon={data.icon}
               headline={data.headLine}
@@ -47,7 +49,7 @@ class BoxIntro extends Component {
 }
 
 BoxIntro.propTypes = {
-  optionalNumber: PropTypes.number
+  textColor: PropTypes.string
 };
 
 export default BoxIntro;

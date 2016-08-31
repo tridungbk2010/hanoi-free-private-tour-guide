@@ -18,7 +18,7 @@ class Pricing extends Component {
       <div className="fl-pricing container-fluid">
         <div className="fixWidth">
           <div>
-            <h3 className="fl-pricing-title">Pricing</h3>
+            <h3 className="fl-pricing-title">Our Tour</h3>
             {DATA_PRICING.map((data, index)=> <PricingItem
               key = {index}
               header={data.header}

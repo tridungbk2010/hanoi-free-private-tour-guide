@@ -1,0 +1,85 @@
+@import "../../styles/colors.scss";
+
+.fl-team-member-item {
+  padding: 10px;
+  margin: 15px 0;
+  min-height: 180px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color: #fff;
+  > div {
+    text-align: center;
+    margin: 10px 0;
+  }
+  .fl-tem-member-bios {
+
+  }
+  .showBios {
+
+  }
+  .fl-team-member-name{
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .fl-team-member-pos{
+    font-size: 16px;
+  }
+  .fl-team-member-level{
+  }
+  .fl-team-member-item-description {
+    font-size: 14px;
+      line-height: 1.3em;
+    padding: 10px 15px;
+    font-weight: 300;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+  }
+  .fl-team-member-pos{
+    padding-top: 10px;
+  }
+  .fl-team-member-level {
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+  }
+  .fl-team-member-level-lv{
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .fl-team-member-level-major{
+    font-size: 16px;
+  }
+  .showLevel {
+
+  }
+  .fl-team-member-overlayBg {
+    width: 100%;
+    height: 100%;
+    background-color: $DARK_CYAN;
+    opacity: .8;
+  }
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .fl-team-member-item {
+   // height: 180px;
+    //width: 320px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fl-team-member-item {
+    //height: 180px;
+    //width: 320px;
+  }
+}
