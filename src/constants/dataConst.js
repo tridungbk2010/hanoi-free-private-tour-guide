@@ -254,7 +254,7 @@ export const COUNTRY_DATA = [
 ];
 
 export const DATA_COMPANY_SIZE = [
-  "1-9 people",
+  "Select tour name",
   "10-29 people",
   "30-99 people",
   "100-299 people",
@@ -263,6 +263,15 @@ export const DATA_COMPANY_SIZE = [
   "10,000-29,999 people",
   "30,000-99,999 people",
   "100,000 or more people"
+];
+
+export const TOUR_DATA = [
+  "Select tour name",
+  "Hanoi Old quarter",
+  "Food tour",
+  "Hanoi mausoleum",
+  "Hanoi war site",
+  "Foot tour"
 ];
 
 export const DATA_PRICING = [

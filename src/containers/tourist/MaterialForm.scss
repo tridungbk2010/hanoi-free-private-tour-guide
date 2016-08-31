@@ -1,0 +1,29 @@
+@import "../../styles/colors";
+
+.layout-form {
+  background-color: #f5f5f5;
+  width: 100%;
+  margin-top: 60px;
+  height: 100vh;
+  display: inline-block;
+  .title{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+  }
+  .material-form {
+    width: 320px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding:10px 15px;
+    margin: 0 auto;
+    .form{
+      .date{
+        width: 180px;
+      }
+      .time{
+        width: 60px;
+      }
+    }
+  }
+}

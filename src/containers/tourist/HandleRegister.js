@@ -4,22 +4,23 @@
 import React, {Component, PropTypes} from "react";
 // import {connect} from "react-redux";
 // import {bindActionCreators} from "redux";
-import RegisterForm from "./RegisterForm";
+// import RegisterForm from "./RegisterForm";
+import MaterialForm from "./MaterialForm";
 
 class HandleRegister extends Component {
   constructor(props, context) {
     super(props, context);
-    this.handleChange = this.handleChange.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e) {
-    console.log("handleChange", e.target.value);
-  }
+  // handleChange(e) {
+  //   console.log("handleChange", e.target.value);
+  // }
 
   render() {
     return (
       <div className="handle-book">
-        <RegisterForm onChange={this.handleChange}/>
+        <MaterialForm />
       </div>
 
     );
