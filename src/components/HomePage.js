@@ -3,7 +3,6 @@ import Cover from "./cover/Cover";
 import CommentList from "../containers/comments/CommentList";
 import Features from "./features/Features";
 import OurTour from "../containers/our-tour/OurTour";
-import Pricing from "../components/pricing/Pricing";
 import Contact from "../components/contact/Contact";
 import Footer from "../components/common/Footer";
 // import {Link} from "react-router";
@@ -26,11 +25,10 @@ class HomePage extends Component {
           <Features />
         </div>
 
-        <OurTour />
-
-        <div id="Pricing">
-          <Pricing />
+        <div id="ourTour">
+          <OurTour />
         </div>
+
 
         <div className="bodyContent" id="Contact">
           <Contact />

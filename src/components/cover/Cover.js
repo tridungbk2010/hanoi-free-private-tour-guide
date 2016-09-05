@@ -27,7 +27,7 @@ class Cover extends Component {
           </div>
           <p className="fl-form-subscribe-desc">Hanoi Free Private Tour Guide provides (according to the request of the
             tourists, unlimited in styles)</p>
-          <Link to={"book-tour"}> <Button text={"Book Free Tour"} icon={iconBtnBookTour} /></Link>
+          <Link to={"book-tour"} refresh = {true}> <Button text={"Book Free Tour"} icon={iconBtnBookTour} /></Link>
         </div>
       </section>
     );

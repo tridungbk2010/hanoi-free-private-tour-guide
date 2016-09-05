@@ -3,6 +3,7 @@
  */
 import React, {PropTypes, Component} from "react";
 import "./OurTourItem.scss";
+import Button from "../../components/button/Button";
 
 class OurTourItem extends Component {
   constructor(props) {
@@ -10,37 +11,33 @@ class OurTourItem extends Component {
     this.state = {
       isHover: false
     };
-    this.handleMouseEnter = this.handleMouseEnter.bind(this);
-    this.handleOnMouseLeave = this.handleOnMouseLeave.bind(this);
   }
 
-  handleMouseEnter() {
-    this.setState({isHover: true});
-  }
-
-  handleOnMouseLeave() {
-    this.setState({isHover: false});
-  }
 
   render() {
     const styleBackground = (avatarUrl=> {
       return {
-        backgroundImage: this.state.isHover ? `linear-gradient(to bottom, rgba(6, 27, 35, 0.8), rgba(6, 27, 35, 0.8)), 
-        url(${avatarUrl})` : `url(${avatarUrl})`,
+        backgroundImage: `url(${avatarUrl})`,
         backgroundPosition: 'center center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
       }
     });
 
-    const {avatarUrl} = this.props;
+    const {avatarUrl, tourName, description, time} = this.props;
     return (
-      <div className="col-sm-6 col-md-4 col-xs-12"
-           onMouseLeave={this.handleOnMouseLeave}
-           onMouseEnter={this.handleMouseEnter}
-      >
-        <div className="fl-team-member-item"
-             style={styleBackground(avatarUrl)}>
+      <div className="col-sm-6 col-md-4 col-xs-12 item-tour">
+        <div className="tour-item">
+          <div className="fl-team-member-item" style={styleBackground(avatarUrl)}>
+          </div>
+          <div className="text-tour">
+            <span className="tour-name">{tourName}</span>
+            <span className="time-tour-item"><i className="fa fa-clock-o" aria-hidden="true"/> {time}</span>
+            <p className="des">
+              {description}
+            </p>
+            <Button text={"Book"}/>
+          </div>
         </div>
       </div>
     );
@@ -49,11 +46,9 @@ class OurTourItem extends Component {
 
 OurTourItem.propTypes = {
   avatarUrl: PropTypes.string,
-  name: PropTypes.string,
-  position: PropTypes.string,
+  tourName: PropTypes.string,
   description: PropTypes.string,
-  level: PropTypes.string,
-  major: PropTypes.string
+  time: PropTypes.string
 };
 
 export default OurTourItem;

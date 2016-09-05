@@ -9,7 +9,7 @@ class App extends React.Component {
     return (
       <div className="container-fluid">
         <Header leftSide={[<MenuIcon text={"MENU"}/>]}
-          loading={this.props.loading}
+                loading={this.props.loading}
         />
         {this.props.children}
       </div>
@@ -29,3 +29,5 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(App);
+
+

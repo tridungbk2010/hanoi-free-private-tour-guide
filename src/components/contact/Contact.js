@@ -27,8 +27,6 @@ class Contact extends Component {
     return (
       <div className="fl-contact">
         <h4 className="fl-contact-title">CONTACT</h4>
-        <p className="fl-contact-desc">The FLOW team is based in Berlin, and our parent company, Wahl & Case also has
-          offices in Tokyo and San Francisco.</p>
         {
           DATA_ADDRESS.map((data, id) => <ContactItem
             key={id}

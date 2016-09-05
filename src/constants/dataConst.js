@@ -359,23 +359,10 @@ export const DATE_FEATURES = [
 
 export const DATA_ADDRESS = [
   {
-    place: "BERLIN",
-    national: "Germany",
-    address: ["Zehdenicker Straße 1","10119 Berlin"],
+    place: "Hanoi",
+    national: "Hanoi",
+    address: ["206A TTQKTD","241 Mai Dich, Cau Giay, Hanoi"],
     urlMap:"https://www.google.com/maps/embed/v1/place?q=Zehdenicker+Straße+1+10119+Berlin+Germany&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"
-  },
-  {
-    place: "TOKYO",
-    national: "Japan",
-    address: ["2-26-8 Jingumae","4F Shibuya-ku","Tokyo 150-0001"],
-    urlMap:"https://www.google.com/maps/embed/v1/place?q=2-26-8+Jingumae+4F&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"
-  },
-  {
-
-    place: "SAN FRANCISCO",
-    national: "United States",
-    address: ["582 Market Street, Suite 204","San Francisco","CA 94104"],
-    urlMap:"https://www.google.com/maps/embed/v1/place?q=582+Market+Street,+Suite+204+San+Francisco+CA+94104+United+States&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"
   }
 ];
 

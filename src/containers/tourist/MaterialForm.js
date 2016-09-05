@@ -10,6 +10,7 @@ import MenuItem from "material-ui/MenuItem";
 import DatePicker from 'material-ui/DatePicker';
 import TimePicker from 'material-ui/TimePicker';
 import "./MaterialForm.scss";
+import RaisedButton from 'material-ui/RaisedButton';
 import {TOUR_DATA} from '../../constants/dataConst';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
@@ -19,16 +20,19 @@ injectTapEventPlugin();
 class MaterialForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: 0};
-    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      country: 0,
+      tour: 0
+    };
+    this.handleChangeTourName = this.handleChangeTourName.bind(this);
   }
 
   getChildContext() {
     return {muiTheme: getMuiTheme(baseTheme)};
   }
 
-  handleChange (value){
-    this.setState({value});
+  handleChangeTourName(tour) {
+    this.setState({tour:tour});
   }
 
   render() {
@@ -37,6 +41,10 @@ class MaterialForm extends Component {
         <h2 className="title">Please pick up a kind of tour</h2>
         <div className="material-form">
           <form className="form">
+            <div>
+              <span className="date"><DatePicker hintText="Date of departure" style={{width:180}}/></span>
+              <span className="time"><TimePicker hintText="Time" style={{width:100}}/></span>
+            </div>
             <TextField
               fullWidth={true}
               hintText="No"
@@ -46,16 +54,16 @@ class MaterialForm extends Component {
               fullWidth={true}
               hintText="Name"
             />
-
-            <SelectField value={this.state.value} onChange={this.handleChange} fullWidth={true}>
+            <TextField
+              fullWidth={true}
+              hintText="Nation e.g: USA, England, Australia"
+            />
+            <SelectField value={this.state.tour} onChange={this.handleChangeTourName} fullWidth={true}>
               {
                 TOUR_DATA.map((data, index) => <MenuItem value={index} primaryText={data} />)
               }
             </SelectField>
-            <div>
-              <span className="date"><DatePicker hintText="Date of departure" style={{width:180}}/></span>
-              <span className="time"><TimePicker hintText="Time" style={{width:100}}/></span>
-            </div>
+
             <TextField
               fullWidth={true}
               hintText="Pickup address"
@@ -70,7 +78,7 @@ class MaterialForm extends Component {
               multiLine={true}
               rows={2}
              />
-
+            <RaisedButton label="Book" primary={true} />
           </form>
         </div>
       </div>

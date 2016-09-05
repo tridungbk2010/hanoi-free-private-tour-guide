@@ -70,3 +70,5 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(null, mapDispatchToProps)(Header);
+
+//<Logo onClick={this.handleClickLogo}/>

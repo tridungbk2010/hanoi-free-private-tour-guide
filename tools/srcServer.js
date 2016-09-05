@@ -1,48 +1,30 @@
-// This file configures the development web server
-// which supports hot reloading and synchronized testing.
-
-// Require Browsersync along with webpack and middleware for it
-import browserSync from 'browser-sync';
-// Required for react-router browserHistory
-// see https://github.com/BrowserSync/browser-sync/issues/204#issuecomment-102623643
-import historyApiFallback from 'connect-history-api-fallback';
+import express from 'express';
 import webpack from 'webpack';
-import webpackDevMiddleware from 'webpack-dev-middleware';
-import webpackHotMiddleware from 'webpack-hot-middleware';
+import path from 'path';
 import config from '../webpack.config.dev';
+import open from 'open';
 
-const bundler = webpack(config);
+/* eslint-disable no-console */
 
-// Run Browsersync and use middleware for Hot Module Replacement
-browserSync({
-  server: {
-    baseDir: 'src',
+const port = 3000;
+const app = express();
+const compiler = webpack(config);
 
-    middleware: [
-      webpackDevMiddleware(bundler, {
-        // Dev middleware can't access config, so we provide publicPath
-        publicPath: config.output.publicPath,
+app.use(require('webpack-dev-middleware')(compiler, {
+  noInfo: true,
+  publicPath: config.output.publicPath
+}));
 
-        // pretty colored output
-        stats: { colors: true },
+app.use(require('webpack-hot-middleware')(compiler));
 
-        // Set to false to display a list of each file that is being bundled.
-        noInfo: true
+app.get('*', function(req, res) {
+  res.sendFile(path.join( __dirname, '../src/index.html'));
+});
 
-        // for other settings see
-        // http://webpack.github.io/docs/webpack-dev-middleware.html
-      }),
-
-      // bundler should be the same as above
-      webpackHotMiddleware(bundler),
-
-      historyApiFallback()
-    ]
-  },
-
-  // no need to watch '*.js' here, webpack will take care of it for us,
-  // including full page reloads if HMR won't work
-  files: [
-    'src/*.html'
-  ]
+app.listen(port, function(err) {
+  if (err) {
+    console.log(err);
+  } else {
+    open(`http://localhost:${port}`);
+  }
 });

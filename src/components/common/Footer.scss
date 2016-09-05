@@ -3,8 +3,8 @@
 .footer{
   position: relative;
   background-color: $DARK_CYAN;
-  height: 90px;
-  line-height:90px;
+  height: 50px;
+  line-height:50px;
 
   .term{
     color: #fff;
@@ -16,11 +16,8 @@
   }
   .copyRight{
     color: #fff;
-    position: absolute;
-    left: 47%;
-    &:hover{
-      text-decoration: none;
-      color: $GREEN;
-    }
+    display: inline-block;
+    width: 100%;
+    text-align: center;
   }
 }
