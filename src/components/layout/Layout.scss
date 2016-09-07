@@ -1,12 +1,13 @@
 @import "../../styles/colors";
 .fl-layout{
-  background: $DARK_CYAN;
-  position: absolute;
+  background: rgba(0,0,0,.5);
+  position: fixed;
   top:0;
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 101;
+  z-index: 9999;
+  overflow-y: scroll;
   padding-bottom: 20px;
   .fl-layout-wrap-form{
     margin:60px auto 0 auto;

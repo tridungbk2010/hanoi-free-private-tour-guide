@@ -6,10 +6,9 @@
 
 /* Styles */
 body {
-  font-family: 'Raleway','Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-family:'Raleway','Helvetica Neue', Helvetica, Arial, sans-serif !important;
   color: #4d4d4d;
   margin: 0 auto;
-  line-height: 1.3em !important;
   -webkit-font-smoothing: antialiased;
   font-weight: 300;
   background-color: grey;
@@ -31,9 +30,7 @@ h2 {
 .loss {
   color: green;
 }
-label{
-margin: 0 !important;
-}
+
 input.small {
   width: 46px;
 }
@@ -56,22 +53,6 @@ a{
   &:focus, &:hover{
     text-decoration: none !important;
   }
-}
-
-select, input::-webkit-input-placeholder {
-  color: $GRAY !important;
-}
-
-input:-moz-placeholder { /* Firefox 18- */
-  color: $GRAY !important;
-}
-
-input::-moz-placeholder {  /* Firefox 19+ */
-  color: $GRAY !important;
-}
-
-input:-ms-input-placeholder {
-  color: $GRAY !important;
 }
 
 .fl-overlay-layout{

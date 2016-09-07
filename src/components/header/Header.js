@@ -8,50 +8,57 @@ import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import * as menuActions from '../../actions/menuActions';
 // import Icon from "../icon/Icon";
-import Button from '../../components/button/Button';
 import "./header.scss";
-import {Link} from 'react-router';
-import {browserHistory} from 'react-router';
+import {scroller} from "react-scroll";
+import NetworkIcon from '../../components/common/NetworkIcon';
 
 class Header extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      className: ''
+    };
     this.handleClickLogo = this.handleClickLogo.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   handleClickLogo() {
-    this.props.actions.clickMenu("");
-    browserHistory.push("/");
-    let posX = window.pageXOffset;
-    let posY = window.pageYOffset;
-    let incrementer = 8;
-    const backHome = setInterval(frame, 8);
+    scroller.scrollTo("cover", {
+      duration: 1000,
+      delay: 0,
+      offset: -60,
+      smooth: true,
+      isDynamic: true
+    });
+  }
 
-    function frame() {
-      if (posY <= 0) {
-        clearInterval(backHome);
-      } else {
-        incrementer += 1;
-        posY -= Math.pow(1.05, incrementer);
-        window.scrollTo(posX, posY);
-      }
-    }
+  handleScroll() {
+    this.setState({className: window.scrollY >= 60? "small-menu" : ""});
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   render() {
-    const iconBtnBookTour = <i className="fa fa-arrow-circle-right" aria-hidden="true" />;
+    const newClass = this.state.className ? "flowHeader " + this.state.className : "flowHeader";
     return (
-      <nav className="container-fluid flowHeader">
-        <div className="col-xs-4 col-sm-4 leftAction">
-          <Menu />
-        </div>
-        <div className="col-xs-4 col-sm-4 middle-action">
-          <Logo onClick={this.handleClickLogo}/>
-        </div>
-        <div className="col-xs-4 col-sm-4 rightAction">
-          <Link to={"book-tour"}><Button text={"Book Free Tour"}  icon={iconBtnBookTour}/></Link>
-        </div>
-      </nav>
+      <div className="wrap-header">
+        <nav className={newClass}>
+          <div className="leftAction">
+            <Logo onClick={this.handleClickLogo}/>
+          </div>
+
+          <div className="rightAction">
+            <Menu />
+            <NetworkIcon />
+          </div>
+        </nav>
+      </div>
     );
   }
 }
@@ -70,5 +77,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(null, mapDispatchToProps)(Header);
-
-//<Logo onClick={this.handleClickLogo}/>
+//<Button text={"Book Free Tour"}  icon={iconBtnBookTour}/>

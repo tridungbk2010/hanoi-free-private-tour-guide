@@ -22,7 +22,7 @@ class Features extends Component {
   render() {
     return (
       <div className="fl-features container-fluid">
-        <h4 className="fl-headline-h4">About Hanoi</h4>
+        <h4 className="fl-headline-h4">About Us</h4>
         {DATE_FEATURES.map((data, id) => <FeatureItem
           key ={id}
           onClick={this.handleClick}

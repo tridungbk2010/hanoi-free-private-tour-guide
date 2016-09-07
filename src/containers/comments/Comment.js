@@ -6,7 +6,7 @@ import './Comment.scss';
 
 class Comment extends Component {
   render() {
-    const {quotation, urlAvatar, name} = this.props;
+    const {quotation, urlAvatar, name, country,date} = this.props;
     return (
       <div className="comment col-xs-12 col-sm-4 col-md-4 col-lg-4">
         <div className="table-avatar">
@@ -14,13 +14,17 @@ class Comment extends Component {
             <img src={urlAvatar} alt={name} />
           </div>
           <div className="comment-name">
-            <h5>{name}</h5>
+            <span className="tourist-name">{name}</span>
+            <span className="comment-country">State: {country}</span>
+            <span className="tour-joined">Tour: <a href="#123">Street food</a></span>
+            <span className="date">{date}</span>
           </div>
         </div>
         <p className="quotation">
+          <i className="fa fa-quote-left fa-1x" />
           {quotation}
         </p>
-        <p>Tour have joined:<a href="#123">Street food</a></p>
+
       </div>
     );
   }
@@ -29,7 +33,9 @@ class Comment extends Component {
 Comment.propTypes = {
   quotation: PropTypes.string,
   urlAvatar:PropTypes.element,
-  name: PropTypes.string
+  name: PropTypes.string,
+  country: PropTypes.string,
+  date:PropTypes.string
 };
 
 export default Comment;

@@ -1,0 +1,34 @@
+@import "../../styles/colors";
+
+.success-page{
+  padding-top: 20px;
+  text-align: center;
+  min-height: 240px;
+  .icon-tick{
+    color: $GREEN;
+    padding-right: 10px;
+  }
+  .success-page-text{
+    .noticed{
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .youtube-icon{
+      color: $GRAY;
+    }
+    .my-channel{
+      cursor: pointer;
+      i{
+        &:hover{
+          color: $DARK_CYAN;
+        }
+      }
+      span{
+        &:hover{
+          color: $DARK_CYAN;
+        }
+      }
+    }
+    padding: 15px;
+  }
+}

@@ -33,9 +33,9 @@ class OurTourItem extends Component {
           <div className="text-tour">
             <span className="tour-name">{tourName}</span>
             <span className="time-tour-item"><i className="fa fa-clock-o" aria-hidden="true"/> {time}</span>
-            <p className="des">
-              {description}
-            </p>
+            <div className="des">
+              {description.map((data, index)=><p key={index}><span>{index + 1}. </span>{data}</p>)}
+            </div>
             <Button text={"Book"}/>
           </div>
         </div>
@@ -47,7 +47,7 @@ class OurTourItem extends Component {
 OurTourItem.propTypes = {
   avatarUrl: PropTypes.string,
   tourName: PropTypes.string,
-  description: PropTypes.string,
+  description: PropTypes.array,
   time: PropTypes.string
 };
 

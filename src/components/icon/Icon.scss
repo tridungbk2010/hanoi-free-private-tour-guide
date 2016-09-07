@@ -2,17 +2,26 @@
 
 .flowIcon {
   cursor: pointer;
-  i{
-    font-family: "FontAwesome", sans-serif;
+  .contain-icon{
+    display: table;
+    i{
+      display: table-cell;
+      vertical-align: middle;
+      font-family: "FontAwesome", sans-serif;
+    }
   }
-
   &:hover{
-    color: $PINK;
+    color: $DARK_CYAN;
   }
   .flIconText {
     font-size: 16px;
-    margin:0 10px;
     color: #000000;
+    padding-left: 10px;
+    display: table-cell;
+    vertical-align: middle;
     font-weight: 700;
+    &:hover{
+      color: $DARK_CYAN;
+    }
   }
 }

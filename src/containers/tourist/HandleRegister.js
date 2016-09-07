@@ -5,7 +5,7 @@ import React, {Component, PropTypes} from "react";
 // import {connect} from "react-redux";
 // import {bindActionCreators} from "redux";
 // import RegisterForm from "./RegisterForm";
-import MaterialForm from "./MaterialForm";
+import MaterialForm from "./BookTourForm";
 
 class HandleRegister extends Component {
   constructor(props, context) {

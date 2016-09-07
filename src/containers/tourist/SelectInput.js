@@ -8,7 +8,7 @@ class SelectInput extends Component {
     const {name, label, onChange, defaultOption, value, error, options} = this.props;
     return (
       <div className="form-group">
-        <label htmlFor={name}>{label}</label>
+        {label && <label htmlFor={name}>{label}</label>}
         <div className="field">
           <select
             name={name}

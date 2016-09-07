@@ -12,7 +12,7 @@ const Icon = (props) => {
           <span className="flIconText">{props.text}</span>
           {props.icon}
         </div> :
-          <div>
+          <div className="contain-icon">
             {props.icon}
             <span className="flIconText">{props.text}</span>
           </div>

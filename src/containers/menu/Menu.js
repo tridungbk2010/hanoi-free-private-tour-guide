@@ -2,16 +2,14 @@
  * Created by Chris Ho on 8/1/2016.
  */
 import React, {Component, PropTypes} from "react";
-import Icon from "../../components/icon/Icon";
-// import MenuItem from "./MenuItem";
 import Overlay from "../../components/common/Overlay";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import * as menuActions from "../../actions/menuActions";
-import NetworkIcon from "../../components/common/NetworkIcon";
-import {browserHistory} from "react-router";
-// import {scroller} from "react-scroll";
+import {scroller} from "react-scroll";
 import "./Menu.scss";
+// import MenuItem from "./MenuItem";
+// import NetworkIcon from "../../components/common/NetworkIcon";
 const enhanceWithClickOutside = require('react-click-outside');
 
 class Menu extends Component {
@@ -19,20 +17,30 @@ class Menu extends Component {
     super(props, context);
     this.state = {
       isShowing: false,
-      targetDiv: ''
+      targetDiv: '',
+      className: ''
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.handleOverlay = this.handleOverlay.bind(this);
     this.handleClickMennu = this.handleClickMennu.bind(this);
+
   }
 
   handleClickMennu(menuName) {
-    browserHistory.push(menuName);
+    scroller.scrollTo(menuName, {
+      duration: 1000,
+      delay: 0,
+      offset: -60,
+      smooth: true,
+      isDynamic: true
+    });
     this.setState({
       isShowing: false
     });
   }
+
+
 
   handleClick() {
     this.setState({
@@ -53,66 +61,25 @@ class Menu extends Component {
   }
 
   render() {
-    const menuIcon = <i className="fa fa-bars fa-2x" aria-hidden="true" />;
-    const closeMenuIcon = <i className="fa fa-times fa-2x" aria-hidden="true" />;
-    const listMenuClassName = this.state.isShowing ? "listMenu showMenu " : "listMenu";
+    // const menuIcon = <i className="fa fa-bars fa-2x" aria-hidden="true" />;
+    // const closeMenuIcon = <i className="fa fa-times fa-2x" aria-hidden="true" />;
+    // const listMenuClassName = this.state.isShowing ? "listMenu showMenu " : "listMenu";
     return (
-      <div className="flMenu">
-        <Icon icon={this.state.isShowing ? closeMenuIcon : menuIcon} text={"MENU"} onClick={this.handleClick}/>
-        <div className={listMenuClassName}>
+      <div className="flMenu" id="home">
+        <div className="listMenu">
           <ul className="ulListMenu">
-            <li onClick={() => this.handleClickMennu("/")} className="menuItem">Home</li>
-            <li onClick={() => this.handleClickMennu("about")} className="menuItem">About Us</li>
-            <li className="menuItem">Tour name</li>
-            <li className="menuItem">Book Free Tour</li>
-            <li className="menuItem">Blog</li>
-            <li className="menuItem">Contacs</li>
+            <li onClick={() => this.handleClickMennu("comment")} className="menuItem">Comment</li>
+            <li onClick={() => this.handleClickMennu("features")} className="menuItem">About</li>
+            <li onClick={() => this.handleClickMennu("ourTour")} className="menuItem">Tours</li>
+            <li onClick={() => this.handleClickMennu("contact")} className="menuItem">Contacs</li>
           </ul>
-          <div className="menu-social-icon">
-            <NetworkIcon size={"small"}/>
-          </div>
         </div>
-
         {this.state.isShowing && <Overlay onClick={this.handleOverlay}/>}
       </div>
 
     );
   }
 }
-// var keys = {37: 1, 38: 1, 39: 1, 40: 1};
-//
-// function preventDefault(e) {
-//   e = e || window.event;
-//   if (e.preventDefault)
-//     e.preventDefault();
-//   e.returnValue = false;
-// }
-
-// function preventDefaultForScrollKeys(e) {
-//   if (keys[e.keyCode]) {
-//     preventDefault(e);
-//     return false;
-//   }
-// }
-
-// function disableScroll() {
-//   if (window.addEventListener) // older FF
-//     window.addEventListener('DOMMouseScroll', preventDefault, false);
-//   window.onwheel = preventDefault; // modern standard
-//   window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-//   window.ontouchmove = preventDefault; // mobile
-//   document.onkeydown = preventDefaultForScrollKeys;
-// }
-//
-// function enableScroll() {
-//   if (window.removeEventListener)
-//     window.removeEventListener('DOMMouseScroll', preventDefault, false);
-//   window.onmousewheel = document.onmousewheel = null;
-//   window.onwheel = null;
-//   window.ontouchmove = null;
-//   document.onkeydown = null;
-// }
-
 
 Menu.propTypes = {
   actions: PropTypes.object
@@ -129,3 +96,9 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(null, mapDispatchToProps)(enhanceWithClickOutside(Menu));
+
+//<Icon icon={this.state.isShowing ? closeMenuIcon : menuIcon} text={"MENU"} onClick={this.handleClick}/>
+//<div className="menu-social-icon">
+//<NetworkIcon size={"small"}/>
+//</div>
+//<li onClick={() => this.handleClickMennu("blog")} className="menuItem">Blog</li>

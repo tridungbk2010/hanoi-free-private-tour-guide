@@ -1,31 +1,57 @@
 @import "../../styles/colors";
 
 .flowHeader {
+  transition: all 0.4s ease;
   height: 60px;
-  margin: 0 !important;
-  padding: 0 !important;
   position: fixed !important;
   z-index: 999;
-  width: 100%;
-  background-color: #fff;
   top:0;
-  left:0;
-  .middle-action {
-    text-align: center;
-    height: 60px;
-    display: inline-block;
-  }
+  width: 100%;
   .leftAction {
-    text-align: left;
     line-height: 60px;
+    transition: all 0.4s ease;
+    float: left;
+    margin-left: 40px;
+    margin-top: 15px;
   }
   .rightAction {
-    text-align: right;
+    float: right;
     height: 60px;
+    transition: all 0.4s ease;
+    margin: 15px 40px 0 0;
     line-height: 60px;
     a{
       display: inline-block;
       text-decoration: none !important;
+    }
+  }
+}
+
+.small-menu{
+  background-color: rgba(0,0,0,.6);
+  transition: all 0.4s ease;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
+  top:0;
+  left:0;
+  .leftAction{
+    margin-top: 0;
+    transition: all 0.4s ease;
+  }
+
+  .rightAction{
+    margin: 0;
+    transition: all 0.4s ease;
+  }
+
+  .logoSVG {
+    display: inline-block;
+    line-height: 40px;
+    img{
+      height: 40px;
+      transition: all 0.4s ease;
     }
   }
 }

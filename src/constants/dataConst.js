@@ -253,25 +253,69 @@ export const COUNTRY_DATA = [
   "Other"
 ];
 
-export const DATA_COMPANY_SIZE = [
-  "Select tour name",
-  "10-29 people",
-  "30-99 people",
-  "100-299 people",
-  "1,000-2,999 people",
-  "3,000-9,999 people",
-  "10,000-29,999 people",
-  "30,000-99,999 people",
-  "100,000 or more people"
-];
-
 export const TOUR_DATA = [
-  "Select tour name",
-  "Hanoi Old quarter",
-  "Food tour",
-  "Hanoi mausoleum",
-  "Hanoi war site",
-  "Foot tour"
+  {
+    name:"Select tour name",
+    time:[]
+  },
+  {
+    name:"Old Quarter walking Tour",
+    time:[
+      "Early morning 6am-9am",
+      "Half day in the morning 9am-12am",
+      "Half day in the afternoon 2pm-5pm",
+      "Evening 6pm-9pm",
+      "Full day 9am-5pm"
+    ]
+  },
+  {
+    name:"French Quarter walking Tour",
+    time:[
+      "Early morning 6am-9am",
+      "Half day in the morning 9am-12am",
+      "Half day in the afternoon 2pm-5pm",
+      "Evening 6pm-9pm",
+      "Full day 9am-5pm"
+    ]
+  },
+  {
+    name:"War sites walking Tour",
+    time:[
+      "Half day in the morning 9am-12am",
+      "Half day in the afternoon 2pm-5pm",
+      "Full day 9am-5pm"
+    ]
+  },
+  {
+    name:"City Tour",
+    time:[
+      "Early morning 6am-9am",
+      "Half day in the morning 9am-12am",
+      "Half day in the afternoon 2pm-5pm",
+      "Evening 6pm-9pm",
+      "Full day 9am-5pm"
+    ]
+  },
+  {
+    name:"Street food Tour",
+    time:[
+      "Evening 6pm-9pm"
+    ]
+  },
+  {
+    name:"Early Morning Tour",
+    time:[
+      "Early morning 6am-9am"
+    ]
+  },
+  {
+    name:"Museum Tour",
+    time:[
+      "Half day in the morning 9am-12am",
+      "Half day in the afternoon 2pm-5pm",
+      "Full day 9am-5pm"
+    ]
+  }
 ];
 
 export const DATA_PRICING = [
@@ -331,29 +375,22 @@ export const DATE_FEATURES = [
   {
     urlImg: require("../images/tourguide-intro1.jpg"),
     headline: "Supplying free services for foreign visitors",
-    content: "FLOW is powered by two proprietary psychological tests, " +
-    "the FLOW Motivator Survey and the FLOW Engagement Survey. " +
-    "Both tests were developed by a team of workplace psychologists and " +
-    "statisticians in a rigorous, scientific process. " +
-    "The FLOW Motivator Survey measures people's intrinsic motivators, " +
-    "while the FLOW Engagement Survey measures the extent to which " +
-    "these motivators can be realized in people's work environments."
+    content: "Hanoi free private tour guide does free guiding with the aims of" +
+    " supplying free services for foreign visitors."
   },
   {
     urlImg: require("../images/tg4.jpg"),
     headline: "Advertising Vietnam’s beauty: humans, sceneries, customs, cultures, cuisine.",
-    content: "FLOW gives you access to both individual and company-level reports. " +
-    "Reports are highly actionable, with specific, prioritized recommendations " +
-    "for follow-up measures that help you make the most of your engagement initiatives. " +
-    "In addition, all of the data in the reports is standardized and benchmarked, " +
-    "so you can see how your company compares to other employers."
+    content: "200 members are always ready to pick up guests. " +
+    "300+ tours have been taken, and we are heading to 1000 tours within 2016. " +
+    "40+ nations are where our guests come from."
   },
   {
     urlImg: require("../images/tg6.jpg"),
     headline: "Chances for Vietnamese young generation to meet and learn from global citizens",
-    content: "FLOW's predictive algorithms will help you to objectively and analytically " +
-    "assess culture fit in your hiring process, to identify the measures that will " +
-    "most effectively improve employee engagement, and to forecast and prevent unwanted turnover."
+    content: "Advertising Vietnam’s beauty: humans, sceneries, customs, cultures, cuisine." +
+    " chances for Vietnamese young generation to meet and learn from global citizens." +
+    " We not only show you my country but also learn more from you."
   }
 ];
 
@@ -373,19 +410,25 @@ export const DATA_COMMENTS = [
     "Three of us, including our 13 y old were met at our hotel by Huong and her young assistant " +
     "(who was in-training) .. Smiles and greetings all round - I immediately knew we were in for...",
     urlAvatar: require("../images/guest1.jpg"),
-    name:"Anne Bertucio"
+    name:"Anne Bertucio",
+    country:"USA",
+    date:'22/06/2016'
   },
   {
     quotation:"Solving problems and making lives easier with code is really exciting. " +
     "Thanks for providing great material and making a real change in people’s lives!",
 
     urlAvatar: require("../images/guest2.jpg"),
-    name:"Matt Orahood"
+    name:"Matt Orahood",
+    country:"Canada",
+    date:'18/08/2016'
   },
   {
     quotation:"Code School allowed me to leave my dead-end job of 11 years and find a great job as a front-end/UI developer. " +
     "I still keep my subscription active and enjoy the variety of courses you offer",
     urlAvatar: require("../images/guest3.jpg"),
-    name:"James Olguin"
+    name:"James Olguin",
+    country:"Australia",
+    date:'28/05/2016'
   }
 ];

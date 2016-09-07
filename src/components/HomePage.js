@@ -5,6 +5,9 @@ import Features from "./features/Features";
 import OurTour from "../containers/our-tour/OurTour";
 import Contact from "../components/contact/Contact";
 import Footer from "../components/common/Footer";
+import BookTourForm from '../containers/tourist/BookTourForm';
+import Layout from '../components/layout/Layout';
+import {connect} from 'react-redux';
 // import {Link} from "react-router";
 
 
@@ -16,12 +19,13 @@ class HomePage extends Component {
   render() {
     return (
       <div className="homePage">
+        {this.props.showUp && <Layout children={<BookTourForm />}/>}
         <Cover />
-        <div className="bodyContent">
+        <div className="bodyContent" id="comment">
           <CommentList />
         </div>
 
-        <div className="bodyContent" id="Features">
+        <div className="bodyContent" id="features">
           <Features />
         </div>
 
@@ -30,7 +34,7 @@ class HomePage extends Component {
         </div>
 
 
-        <div className="bodyContent" id="Contact">
+        <div className="bodyContent" id="contact">
           <Contact />
         </div>
         <Footer />
@@ -40,8 +44,14 @@ class HomePage extends Component {
 }
 
 HomePage.propTypes = {
-  menu: PropTypes.string
+  menu: PropTypes.string,
+  showUp:PropTypes.bool
 };
 
+function mapStateToProps(state) {
+  return {
+    showUp: state.overlayReducer
+  }
+}
 
-export default HomePage;
+export default connect(mapStateToProps, null)(HomePage);

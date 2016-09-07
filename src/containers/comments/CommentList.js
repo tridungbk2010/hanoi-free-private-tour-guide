@@ -15,11 +15,12 @@ class CommentList extends Component {
             DATA_COMMENTS.map((data, index) =>
               <Comment key={index} name={data.name}
                        quotation={data.quotation}
+                       country={data.country}
+                       date={data.date}
                        urlAvatar={data.urlAvatar}/>
             )
           }
         </div>
-
       </div>
     );
   }
