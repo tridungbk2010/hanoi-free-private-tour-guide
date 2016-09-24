@@ -7,7 +7,7 @@ import './Contact.scss';
 const ContactItem = (props)=> {
   const styleIframe = {
     height:160,
-    width:250,
+    width:"100%",
     border:0
   };
   return (

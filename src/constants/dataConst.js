@@ -252,68 +252,140 @@ export const COUNTRY_DATA = [
   "Zimbabwe",
   "Other"
 ];
-
-export const TOUR_DATA = [
+export const DATA_TOUR = [
   {
-    name:"Select tour name",
-    time:[]
-  },
-  {
-    name:"Old Quarter walking Tour",
+    id:'tour01',
+    url: require("../images/oldquater.jpg"),
+    name: "Old Quarter walking Tour",
     time:[
-      "Early morning 6am-9am",
-      "Half day in the morning 9am-12am",
-      "Half day in the afternoon 2pm-5pm",
-      "Evening 6pm-9pm",
-      "Full day 9am-5pm"
+      "6am-9am",
+      "9am-12am",
+      "2pm-5pm",
+      "6pm-9pm",
+      "9am-5pm"
+    ],
+    description: [
+      "Sword Lake",
+      "Old quarter introduction",
+      "76 Hang Buom",
+      "Đồng Xuân Market",
+      "Ca Tru Singing (at Ancient house:87 Ma May/ 28 Hang Buom)",
+      "Long Biên Bridge",
+      "The house No48, Hang Ngang street",
+      "Hanoi Ceramic Mosaic Mural"
     ]
   },
   {
-    name:"French Quarter walking Tour",
+    id:'tour02',
+    url: require("../images/french.jpg"),
+    name: "French Quarter walking Tour",
     time:[
-      "Early morning 6am-9am",
-      "Half day in the morning 9am-12am",
-      "Half day in the afternoon 2pm-5pm",
-      "Evening 6pm-9pm",
-      "Full day 9am-5pm"
+      "6am-9am",
+      "9am-12am",
+      "2pm-5pm",
+      "6pm-9pm",
+      "9am-5pm"
+    ],
+    description: [
+      "Sword Lake",
+      "St. Joseph's Cathedral, Cong Caphe",
+      "Hoa lo Prison",
+      "Trang Tien Ice Cream",
+      "Opera House, and Hilton Opera",
+      "National Museum of Vietnamese History",
+      "Museum of the Vietnamese Revolution",
+      "The State Bank of Vietnam"
     ]
   },
   {
-    name:"War sites walking Tour",
+    id:"tour03",
+    url: require("../images/war-site.jpg"),
+    name: "War sites walking Tour",
     time:[
-      "Half day in the morning 9am-12am",
-      "Half day in the afternoon 2pm-5pm",
-      "Full day 9am-5pm"
+      "9am-12am",
+      "2pm-5pm",
+      "9am-5pm"
+    ],
+    description: [
+      "Military History Museum",
+      "Hoa lo Prison",
+      "Vietnam People's Air Force Museum",
+      "Hanoi  B52 Victory Museum",
+      "B-52 Wreck in  Huu Tiep Lake"
     ]
   },
   {
-    name:"City Tour",
+    id:"tour04",
+    url: require("../images/city.jpg"),
+    name: "City Tour",
     time:[
-      "Early morning 6am-9am",
-      "Half day in the morning 9am-12am",
-      "Half day in the afternoon 2pm-5pm",
-      "Evening 6pm-9pm",
-      "Full day 9am-5pm"
+      "6am-9am",
+      "9am-12am",
+      "2pm-5pm",
+      "6pm-9pm",
+      "9am-5pm"
+    ],
+    description: [
+      "Old quarter introduction",
+      "76 Hang Buom",
+      "Đồng Xuân Market",
+      "Ho Chi Minh Complex: Mausoleum, Museum, President",
+      "Temple of Literature",
+      "Hoa Lo prison",
+      "St. Jose Cathedral, Cong Coffee"
     ]
   },
   {
-    name:"Street food Tour",
+    id:"tour05",
+    url: require("../images/tg5.jpg"),
+    name: "Street food Tour",
     time:[
-      "Evening 6pm-9pm"
+      "6pm-9pm"
+    ],
+    description: [
+      "Sword Lake",
+      "Old quarter introduction",
+      "76 Hang Buom",
+      "Đồng Xuân Market",
+      "Ca Tru Singing (at Ancient house:87 Ma May/ 28 Hang Buom)",
+      "Long Biên Bridge",
+      "The house No48, Hang Ngang street",
+      "Hanoi Ceramic Mosaic Mural"
     ]
   },
   {
-    name:"Early Morning Tour",
+    id:"tour06",
+    url: require("../images/tg4.jpg"),
+    name: "Early Morning Tour",
     time:[
-      "Early morning 6am-9am"
+      "6am-9am"
+    ],
+    description: [
+      "Sword Lake",
+      "Old quarter introduction",
+      "76 Hang Buom",
+      "Đồng Xuân Market",
+      "Ca Tru Singing (at Ancient house:87 Ma May/ 28 Hang Buom)",
+      "Long Biên Bridge",
+      "The house No48, Hang Ngang street",
+      "Hanoi Ceramic Mosaic Mural"
     ]
   },
   {
-    name:"Museum Tour",
+    id:"tour07",
+    url: require("../images/museum.jpg"),
+    name: "Museum Tour",
     time:[
-      "Half day in the morning 9am-12am",
-      "Half day in the afternoon 2pm-5pm",
-      "Full day 9am-5pm"
+      "9am-12am",
+      "2pm-5pm",
+      "9am-5pm"
+    ],
+    description: [
+      "Sword Lake",
+      "Old quarter introduction",
+      "76 Hang Buom",
+      "Long Biên Bridge",
+      "The house No48, Hang Ngang street"
     ]
   }
 ];
@@ -399,7 +471,7 @@ export const DATA_ADDRESS = [
     place: "Hanoi",
     national: "Hanoi",
     address: ["206A TTQKTD","241 Mai Dich, Cau Giay, Hanoi"],
-    urlMap:"https://www.google.com/maps/embed/v1/place?q=Zehdenicker+Straße+1+10119+Berlin+Germany&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"
+    urlMap:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1565.6336899016342!2d105.77395279484446!3d21.043668809821426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454ceb5427fff%3A0xacb7494300b4bded!2zTmfDtSAyNDEgTWFpIEThu4tjaCwgTWFpIEThu4tjaCwgQ-G6p3UgR2nhuqV5LCBIw6AgTuG7mWksIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1473417939429"
   }
 ];
 
@@ -409,26 +481,67 @@ export const DATA_COMMENTS = [
     "share their culture and practise their english ... fantastic. " +
     "Three of us, including our 13 y old were met at our hotel by Huong and her young assistant " +
     "(who was in-training) .. Smiles and greetings all round - I immediately knew we were in for...",
-    urlAvatar: require("../images/guest1.jpg"),
+    urlAvatar: require("../images/tour_comment6.jpg"),
     name:"Anne Bertucio",
     country:"USA",
-    date:'22/06/2016'
+    date:'22/06/2016',
+    tour:'Old Quarter walking Tour'
   },
   {
-    quotation:"Solving problems and making lives easier with code is really exciting. " +
-    "Thanks for providing great material and making a real change in people’s lives!",
-
-    urlAvatar: require("../images/guest2.jpg"),
-    name:"Matt Orahood",
+    quotation:"Hey Jenny, we really love your country allready. " +
+    "It was such a nice day walking with you two! Thank you so much. " +
+    "We just arrived in our Hotel in Danang. I'm pretty sure that we will have a great time here also. " +
+    "Hope we can see wach other one day in Germany! You are allways welcome to stay at ms house. " +
+    "Just write me or with you have a question finding a scholarship I will try to hell you. " +
+    "Good night. Madlen",
+    urlAvatar: require("../images/tour_comment5.jpg"),
+    name:"Madlen Maier",
     country:"Canada",
-    date:'18/08/2016'
+    date:'18/08/2016',
+    tour:'Museum Tour'
   },
   {
-    quotation:"Code School allowed me to leave my dead-end job of 11 years and find a great job as a front-end/UI developer. " +
-    "I still keep my subscription active and enjoy the variety of courses you offer",
-    urlAvatar: require("../images/guest3.jpg"),
-    name:"James Olguin",
+    quotation:"Hi guys thank you so much for showing us around your wonderful city. " +
+    "you were great guides and really nice people. We are going to the markets " +
+    "tonight and then we are off to Hoi an. hopefully next time we meet our Vietnamese " +
+    "will be better and you'll be speaking better English than us. we wish you all the " +
+    "best for you and your families and hopefully we will see you again, maybe even in Tasmania? " +
+    "lots of love, hugs and kisses - Ben and Kim. tam biet",
+    urlAvatar: require("../images/tour_comment4.jpg"),
+    name:"Ben Bridgman",
+    country:"US",
+    date:'28/05/2016',
+    tour:'Street food Tour'
+  },
+  {
+    quotation:"Hello Jenny, how are you?? Our friends Lucia and Maia told us to contact you for the walking tour through Hanoi " +
+    "We arrived from sapa yesteday very late at night, it was such a wonderful experince " +
+    "We have two days in the city and wanted to know if today tou are available at any time to organize a tour guide with you",
+    urlAvatar: require("../images/tour_comment3.jpg"),
+    name:"Clara Mallea Gil",
     country:"Australia",
-    date:'28/05/2016'
+    date:'18/03/2016',
+    tour:'War sites walking Tour'
+  },
+  {
+    quotation:"Thanks so much, Quy! It was a wonderful tour and Vietnam has so many kinds of food " +
+    "and they are all the best. Haven't had anything I didn't like. " +
+    "Take are and I know you will go to New York and love it ",
+    urlAvatar: require("../images/tour_comment2.jpg"),
+    name:"Irina Sjursen",
+    country:"Germany",
+    date:'13/11/2015',
+    tour:'French Quarter walking Tour'
+  },
+  {
+    quotation:"Haha definitely 🙂 " +
+    "I just met a friend's friend last night. She is going to study marketing overseas. " +
+    "If you want, I might be able to send her note, and link the two of you together.",
+    urlAvatar: require("../images/tour_comment1.jpg"),
+    name:"Yee Qing Xiang",
+    country:"Taiwan",
+    date:'25/06/2016',
+    tour:'Old Quarter walking Tour'
   }
+
 ];

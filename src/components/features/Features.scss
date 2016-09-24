@@ -1,9 +1,28 @@
-.fl-features{
+.odd {
+  .fl-feature-text-box {
+    float: right !important;
+  }
+  .fl-feature-img {
+    float: left !important;
+  }
+}
+.even {
+  .fl-feature-text-box {
+    float: left !important;
+  }
+  .fl-feature-img {
+    float: right !important;
+  }
+}
+
+.fl-features {
   padding-bottom: 40px !important;
-  .fl-headline-h4{
+  .fl-headline-h4 {
+    text-transform: uppercase;
     font-size: 24px;
     font-weight: 300;
     text-align: center;
-    padding-top:30px;
+    padding-top: 30px;
   }
+
 }

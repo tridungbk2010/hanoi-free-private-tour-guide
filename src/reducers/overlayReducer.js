@@ -4,10 +4,10 @@
 import * as actionTypes from "../constants/actionTypes";
 import initialState from "./initialState";
 
-export default function overlayReducer(state = initialState.showUp, action) {
+export default function overlayReducer(state = initialState.overlayTour, action) {
   switch (action.type) {
     case actionTypes.SHOW_LAYOUT_OVERLAY:
-      return action.showUp;
+      return action.overlayTour;
 
     default:
       return state;

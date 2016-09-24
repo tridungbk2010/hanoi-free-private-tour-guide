@@ -10,7 +10,6 @@ import Layout from '../components/layout/Layout';
 import {connect} from 'react-redux';
 // import {Link} from "react-router";
 
-
 class HomePage extends Component {
   constructor(props) {
     super(props);
@@ -19,7 +18,7 @@ class HomePage extends Component {
   render() {
     return (
       <div className="homePage">
-        {this.props.showUp && <Layout children={<BookTourForm />}/>}
+        {this.props.overlayTour.show && <Layout children={<BookTourForm />}/>}
         <Cover />
         <div className="bodyContent" id="comment">
           <CommentList />
@@ -32,8 +31,6 @@ class HomePage extends Component {
         <div id="ourTour">
           <OurTour />
         </div>
-
-
         <div className="bodyContent" id="contact">
           <Contact />
         </div>
@@ -45,12 +42,12 @@ class HomePage extends Component {
 
 HomePage.propTypes = {
   menu: PropTypes.string,
-  showUp:PropTypes.bool
+  overlayTour:PropTypes.object
 };
 
 function mapStateToProps(state) {
   return {
-    showUp: state.overlayReducer
+    overlayTour: state.overlayReducer
   }
 }
 

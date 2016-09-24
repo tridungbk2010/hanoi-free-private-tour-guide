@@ -55,7 +55,7 @@ class Header extends Component {
 
           <div className="rightAction">
             <Menu />
-            <NetworkIcon />
+            <NetworkIcon size={"small"}/>
           </div>
         </nav>
       </div>
@@ -78,3 +78,4 @@ function mapDispatchToProps(dispatch) {
 
 export default connect(null, mapDispatchToProps)(Header);
 //<Button text={"Book Free Tour"}  icon={iconBtnBookTour}/>
+//<Logo onClick={this.handleClickLogo}/>

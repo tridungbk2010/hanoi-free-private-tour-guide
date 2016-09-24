@@ -2,17 +2,27 @@
 
 .layout-form {
   background-color: #fff;
-  width:600px;
+  width:400px;
   margin: 0 auto;
   border-radius: 5px;
   position: relative;
+  .full-width{
+    width: 100%;
+  }
   .title {
     text-align: center;
     width: 100%;
     padding-top: 10px;
   }
   .head-intro{
-    text-align: center;
+    .modal-header{
+      font-weight: 700;
+      text-align: left;
+    }
+    p{
+      text-align: left;
+      padding: 0 10px;
+    }
   }
   .material-form {
     background-color: #fff;
@@ -29,8 +39,15 @@
     right: 15px;
     cursor: pointer;
     &:hover{
-      color: $DARK_CYAN;
+      color: $PINK;
     }
+  }
+  .form-control{
+    font-size: 14px !important;
+  }
+  .tour-alert{
+    color: $PINK;
+    font-size: 12px;
   }
 }
 
@@ -38,4 +55,18 @@
   .material-form {
     padding: 0 10px;
   }
+}
+
+
+::-webkit-input-placeholder {
+  font-size:14px !important;
+}
+:-moz-placeholder {
+  font-size:14px !important;
+}
+::-moz-placeholder {
+  font-size:14px !important;
+}
+:-ms-input-placeholder {
+  font-size:14px !important;
 }

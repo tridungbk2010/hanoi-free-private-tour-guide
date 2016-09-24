@@ -2,9 +2,17 @@
 
 .tour-item {
   background-color: #fff;
+  border: 1px solid rgba(0,0,0,.09);
+  box-shadow: 0 1px 7px rgba(0,0,0,.05);
+  border-radius: 4px;
   max-width: 320px;
   min-height: 400px;
   text-align: center;
+  &:hover{
+    border: 1px solid rgba(0,0,0,.15);
+    box-shadow: 0 1px 7px rgba(0,0,0,.1);
+  }
+
   margin: 15px 0;
   .text-tour{
     padding: 15px;

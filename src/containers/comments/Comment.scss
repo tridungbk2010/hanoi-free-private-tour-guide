@@ -15,52 +15,49 @@
 }
 
 .comment {
+  overflow: hidden;
   .quotation {
     text-align: justify;
     font-style: italic;
-    i{
+    font-size: 14px;
+    i {
       color: $GRAY;
       padding-right: 5px;
     }
   }
   .table-avatar {
-    display: table;
     margin-bottom: 10px;
     .comment-avatar {
-      display: table-cell;
-      height: 80px;
-      width: 80px;
-      img {
-        border-radius: 50%;
-        height: 100%;
+      overflow: hidden;
+      border-radius: 5px;
+      height: 180px;
+      .img {
         width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: left top;
+        background-repeat: no-repeat;
       }
     }
     .comment-name {
-      padding: 0 0 0 10px;
-      display: table-cell;
-      vertical-align: top;
+      display: block;
+      width: 100%;
       .tourist-name {
         font-size: 16px;
         font-weight: 700;
-        display: block;
+        text-align: center;
       }
       .comment-country {
-        display: inline-block;
+        text-align: center;
         font-size: 13px;
         font-weight: 300;
         color: $GRAY;
       }
       .tour-joined {
-        display: block;
-        font-size: 13px;
-      }
-      .date {
+        text-align: center;
         display: block;
         font-size: 13px;
       }
     }
-
   }
-
 }

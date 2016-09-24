@@ -65,7 +65,7 @@ a{
 }
 
 #ourTour{
-  background-color: #eaeaea;
+  background-color: #fafafa;
 }
 
 @media (max-width: 767px) {
@@ -85,4 +85,11 @@ a{
     width: 960px;
     margin: 0 auto;
   }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=date]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

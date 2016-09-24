@@ -1,11 +1,10 @@
 @import "../../styles/colors";
 
 .fl-feature-item{
-  margin-top: 36px;
+  margin-top: 40px;
   .fl-feature-headline{
-    font-size: 32px;
-    line-height: 1.3em;
-    font-weight:400;
+    font-size:30px;
+    font-weight:300;
     margin-top: 0 !important;
   }
   .fl-feature-content{
@@ -14,15 +13,13 @@
     line-height: 1.3em;
     text-justify: inter-word;
   }
-  .fl-feature-btn{
-    margin:10px 0 ;
-  }
   .fl-feature-img{
+    max-height: 240px;
     overflow: hidden;
-    max-height: 250px;
     >img{
       width: 100%;
       height: auto;
     }
   }
 }
+

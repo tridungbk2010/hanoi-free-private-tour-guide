@@ -3,9 +3,9 @@
  */
 import * as actionTypes from '../constants/actionTypes';
 
-export function showLayout(showUp) {
+export function showLayout(overlayTour) {
   return {
     type:actionTypes.SHOW_LAYOUT_OVERLAY,
-    showUp
+    overlayTour
   }
 }

@@ -22,7 +22,7 @@ export function saveTourist(tourist) {
       params: {
         fullname: tourist.tourist,
         tour_name: tourist.tour,
-        departure_date:tourist.date + "-" + tourist.time,
+        departure_date:"Date: " + tourist.date + "Time: " + tourist.time,
         tourist_number:tourist.no,
         nation:tourist.country,
         email:tourist.email,

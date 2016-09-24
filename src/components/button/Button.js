@@ -12,8 +12,16 @@ const Button = (props)=> {
   };
   return (
     <span className="flow-btn" style={styleButton} onClick={props.onClick}>
-      {props.text}
-      {props.icon && <span className="fl-icon-in-btn">{props.icon}</span>}
+      {props.iconPos === "right" ?
+        <span>
+          {props.text}
+          {props.icon && <span className="fl-icon-in-btn">{props.icon}</span>}
+      </span> :
+        <span>
+          {props.icon && <span className="fl-icon-in-btn">{props.icon}</span>}
+          {props.text}
+      </span>
+      }
       </span>
   );
 };

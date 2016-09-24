@@ -3,7 +3,7 @@
  */
 import React, {PropTypes, Component} from "react";
 import "./OurTourItem.scss";
-import Button from "../../components/button/Button";
+import ManageBookBtn from "./ManageBookBtn";
 
 class OurTourItem extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class OurTourItem extends Component {
       }
     });
 
-    const {avatarUrl, tourName, description, time} = this.props;
+    const {avatarUrl, tourName, description} = this.props;
     return (
       <div className="col-sm-6 col-md-4 col-xs-12 item-tour">
         <div className="tour-item">
@@ -32,11 +32,11 @@ class OurTourItem extends Component {
           </div>
           <div className="text-tour">
             <span className="tour-name">{tourName}</span>
-            <span className="time-tour-item"><i className="fa fa-clock-o" aria-hidden="true"/> {time}</span>
+
             <div className="des">
               {description.map((data, index)=><p key={index}><span>{index + 1}. </span>{data}</p>)}
             </div>
-            <Button text={"Book"}/>
+            <ManageBookBtn tour={tourName}/>
           </div>
         </div>
       </div>
@@ -48,7 +48,19 @@ OurTourItem.propTypes = {
   avatarUrl: PropTypes.string,
   tourName: PropTypes.string,
   description: PropTypes.array,
-  time: PropTypes.string
+  time: PropTypes.array
 };
 
+// function splitString(str) {
+//     return str.substring(str.length - 8);
+// }
 export default OurTourItem;
+
+//<span className="time-tour-item"><i className="fa fa-clock-o" />
+             // Time available:{time.map((data, index)=> <span key={index}>
+               // <i>
+                 // {splitString(data)}
+                //</i>
+                // or
+              //</span>)}
+              //</span>

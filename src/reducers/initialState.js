@@ -2,7 +2,7 @@ export default {
   photosUpload: [],
   target:'',
   menu:'',
-  showUp:false,
+  overlayTour:{},
   sendInBlueEmail:{},
   tourist:{},
   ajaxCallsInProgress: 0

@@ -5,9 +5,9 @@ import React, {Component, PropTypes} from "react";
 import Button from "../../components/button/Button";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
-import * as overlayActions from '../../actions/overlayActions';
-// import BoxIntro from '../../components/box-intro/BoxIntro';
+import * as overlayActions from "../../actions/overlayActions";
 import "./Cover.scss";
+// import BoxIntro from '../../components/box-intro/BoxIntro';
 // import ManageRequest from "../../containers/register/ManageRequest";
 // import Title from "../common/Title";
 // import {Link} from "react-router";
@@ -17,24 +17,26 @@ class Cover extends Component {
     super(props);
     this.showLayoutOverlay = this.showLayoutOverlay.bind(this);
   }
-  showLayoutOverlay(){
+
+  showLayoutOverlay() {
     const {actions} = this.props;
-    actions.showLayout(true);
+    actions.showLayout({show: true});
   }
 
   render() {
-    const iconBtnBookTour = <i className="fa fa-arrow-circle-right" aria-hidden="true"/>;
+    const iconBtnBookTour = <i className="fa fa-arrow-circle-right"/>;
     return (
       <section className="flCover" id="cover">
         <div className="cover-intro">
           <div className="fl-cover-title">
             <span className="content-title">Supplying free services for foreign visitors</span>
           </div>
-          <p className="fl-form-subscribe-desc">Hanoi Free Private Tour Guide provides (according to the request of the
+          <p className="fl-form-subscribe-desc">Hanoi Free Private Tour Guide provides (according to the request of
+            the
             tourists, unlimited in styles)</p>
-          <Button text={"Book Free Tour"} icon={iconBtnBookTour} onClick={this.showLayoutOverlay} />
+          <Button text={"Book Free Tour"} icon={iconBtnBookTour} onClick={this.showLayoutOverlay} iconPos={"right"}/>
         </div>
-        </section>
+      </section>
     );
   }
 }
@@ -45,7 +47,7 @@ Cover.propTypes = {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(overlayActions ,dispatch)
+    actions: bindActionCreators(overlayActions, dispatch)
   }
 }
 
