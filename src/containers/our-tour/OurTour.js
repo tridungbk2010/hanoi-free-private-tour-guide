@@ -13,9 +13,9 @@ class OurTour extends Component {
 
   render() {
     return (
-      <div className="fl-team-member bodyContent container-fluid">
-        <h4 className="fl-team-member-title row">OUR TOUR</h4>
-        <div className="fl-team-member-data row">
+      <div className="fl-team-member">
+        <h4 className="fl-team-member-title">OUR TOURS</h4>
+        <div className="fl-team-member-data">
           {
             DATA_TOUR.map((tour, index) =>
               <OurTourItem

@@ -26,7 +26,7 @@ class OurTourItem extends Component {
 
     const {avatarUrl, tourName, description} = this.props;
     return (
-      <div className="col-sm-6 col-md-4 col-xs-12 item-tour">
+      <div className="item-tour">
         <div className="tour-item">
           <div className="fl-team-member-item" style={styleBackground(avatarUrl)}>
           </div>

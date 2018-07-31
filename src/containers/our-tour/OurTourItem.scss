@@ -5,35 +5,37 @@
   border: 1px solid rgba(0,0,0,.09);
   box-shadow: 0 1px 7px rgba(0,0,0,.05);
   border-radius: 4px;
-  max-width: 320px;
-  min-height: 400px;
+  display: inline-block;
+  width: 100%;
   text-align: center;
   &:hover{
     border: 1px solid rgba(0,0,0,.15);
     box-shadow: 0 1px 7px rgba(0,0,0,.1);
   }
 
-  margin: 15px 0;
+  margin: 10px 0;
   .text-tour{
     padding: 15px;
     .tour-name {
       display: block;
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 20px;
+      font-weight: 800;
     }
     .time-tour-item{
       color:#666;
       font-size: 14px;
-      font-weight: 400;
+      font-weight: 600;
+      display:block;
+      width: 100%;
     }
     .des {
       margin-top: 10px;
-      text-align: justify;
+      text-align: left;
       overflow: hidden;
-      max-height: 100px;
       margin-bottom: 10px;
       p{
         font-size: 14px;
+        font-weight: 300;
         line-height: 20px;
         margin-bottom: 0px !important;
       }
@@ -42,7 +44,7 @@
 }
 
 .fl-team-member-item {
-  min-height: 180px;
+  min-height: 240px;
   overflow: hidden;
   color: #fff;
 }

@@ -1,9 +1,57 @@
 .fl-team-member{
   padding-bottom: 60px;
+  margin: 0 auto;
+
   .fl-team-member-title{
     text-align: center;
     padding-top: 30px;
     font-size: 24px;
     font-weight: 300;
+  }
+}
+
+@media (max-width: 767px) {
+  .fl-team-member{
+    max-width: 90vw;
+    .fl-team-member-data{
+      column-count: 1;
+      column-gap: 20px;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .fl-team-member{
+    max-width: 90vw;
+    .fl-team-member-data{
+      column-count: 2;
+      column-gap: 20px;
+    }
+  }
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .fl-team-member{
+    max-width: 80vw;
+    .fl-team-member-data{
+      column-count: 3;
+      column-gap: 20px;
+    }
+  }
+  .bodyContent{
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .fl-team-member{
+    max-width: 85vw;
+    .fl-team-member-data{
+      column-count: 3;
+      column-gap: 25px;
+    }
+  }
+  .bodyContent{
+    width: 960px;
+    margin: 0 auto;
   }
 }

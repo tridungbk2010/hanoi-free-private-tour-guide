@@ -267,12 +267,14 @@ export const DATA_TOUR = [
     description: [
       "Sword Lake",
       "Old quarter introduction",
-      "76 Hang Buom",
+      "Ancient  House,  No.87  Ma  May  Str",
+      "Egg Coffee - Giảng/Đinh Coffee",
+      "Quan Đế Temple - No.28 Hang Buom Str",
+      "Bạch Mã (White Horse) Temple - No.76 Hang Buom Str",
       "Đồng Xuân Market",
-      "Ca Tru Singing (at Ancient house:87 Ma May/ 28 Hang Buom)",
-      "Long Biên Bridge",
-      "The house No48, Hang Ngang street",
-      "Hanoi Ceramic Mosaic Mural"
+      "No.48 Hang Ngang Str (where Ho Chi Minh stayed and wrote Declaration of Indepenece)",
+      "Ca Tru Singing (optional)",
+      "Water Puppetry (optional)"
     ]
   },
   {
@@ -292,9 +294,7 @@ export const DATA_TOUR = [
       "Hoa lo Prison",
       "Trang Tien Ice Cream",
       "Opera House, and Hilton Opera",
-      "National Museum of Vietnamese History",
-      "Museum of the Vietnamese Revolution",
-      "The State Bank of Vietnam"
+      "National History Museum (optional)"
     ]
   },
   {
@@ -307,11 +307,12 @@ export const DATA_TOUR = [
       "9am-5pm"
     ],
     description: [
-      "Military History Museum",
-      "Hoa lo Prison",
-      "Vietnam People's Air Force Museum",
-      "Hanoi  B52 Victory Museum",
-      "B-52 Wreck in  Huu Tiep Lake"
+      "Hoa lo Prison (highly recommended)",
+      "Military History Museum (highly recommended)",
+      "Ho Chi Minh Museum (recommended)",
+      "Vietnam People's Air Force Museum (optional)",
+      "Hanoi B52 Victory Museum (optional)",
+      "B-52 Wreck in Huu Tiep Lake  (optional)"
     ]
   },
   {
@@ -326,13 +327,13 @@ export const DATA_TOUR = [
       "9am-5pm"
     ],
     description: [
-      "Old quarter introduction",
-      "76 Hang Buom",
-      "Đồng Xuân Market",
-      "Ho Chi Minh Complex: Mausoleum, Museum, President",
-      "Temple of Literature",
+      "Sword lake (recommended)",
+      "Old quarter (recommended)",
+      "Ho Chi Minh Complex (recommended): Mausoleum, Museum, Presidential palace",
+      "Temple of Literature (recommended)",
+      "Hoa Lo Prison (recommended)",
       "Hoa Lo prison",
-      "St. Jose Cathedral, Cong Coffee"
+      "National History Museum (recommended)"
     ]
   },
   {
@@ -343,14 +344,16 @@ export const DATA_TOUR = [
       "6pm-9pm"
     ],
     description: [
-      "Sword Lake",
-      "Old quarter introduction",
-      "76 Hang Buom",
-      "Đồng Xuân Market",
-      "Ca Tru Singing (at Ancient house:87 Ma May/ 28 Hang Buom)",
-      "Long Biên Bridge",
-      "The house No48, Hang Ngang street",
-      "Hanoi Ceramic Mosaic Mural"
+      "Phở (noodle) Lý Quốc Sư",
+      "Phở 49 Bát Đàn",
+      "Phở Sướng số 14 Ngõ Trung Yên, Đinh Liệt",
+      "Phở Thìn 13 Lò Đúc",
+      "Phở Thìn Bờ Hồ (61 Đinh Tiên Hoàng)",
+      "Bún chả Hàng Mành (No.1 Hàng Mành)",
+      "Bún chả Hàng Than (34 Hàng Than)",
+      "Bún chả Obama (24 Lê Văn Hưu)",
+      "Bánh Mì 25 Hàng Cá",
+      "Others (optional)"
     ]
   },
   {
@@ -361,14 +364,11 @@ export const DATA_TOUR = [
       "6am-9am"
     ],
     description: [
-      "Sword Lake",
-      "Old quarter introduction",
-      "76 Hang Buom",
-      "Đồng Xuân Market",
-      "Ca Tru Singing (at Ancient house:87 Ma May/ 28 Hang Buom)",
-      "Long Biên Bridge",
-      "The house No48, Hang Ngang street",
-      "Hanoi Ceramic Mosaic Mural"
+      "Flag salute ceremony",
+      "Quảng Bá Flower Market",
+      "Old Quarter Locals' morning routine",
+      "Breakfast",
+      "Hồ Tây (West Lake) early market (optional)"
     ]
   },
   {
@@ -381,11 +381,55 @@ export const DATA_TOUR = [
       "9am-5pm"
     ],
     description: [
-      "Sword Lake",
-      "Old quarter introduction",
-      "76 Hang Buom",
-      "Long Biên Bridge",
-      "The house No48, Hang Ngang street"
+      "Hoa Lo Prision",
+      "Vietnam Women Museum",
+      "History Museum",
+      "Military History Museum",
+      "Ho Chi Minh Museum"
+    ]
+  },
+  {
+    id:"tour08",
+    url: require("../images/bat-trang-village.jpg"),
+    name: "Craft Village - Half or Full day",
+    time:[
+      "9am-12am",
+      "2pm-5pm",
+      "9am-5pm"
+    ],
+    description: [
+      "Bat Trang Ceramic Village",
+      "Van Phuc Silk Village",
+      "Chuong Conical Hat Village",
+      "Đông Hồ folk woodcut painting"
+    ]
+  },
+  {
+    id:"tour09",
+    url: require("../images/duong_lam.jpg"),
+    name: "Ancient Village - Half or Full day",
+    time:[
+      "9am-12am",
+      "2pm-5pm",
+      "9am-5pm"
+    ],
+    description: [
+      "Đường Lâm Ancient Village",
+      "Bat Trang Ceramic Village"
+    ]
+  },
+  {
+    id:"tour10",
+    url: require("../images/efis-tour.jpg"),
+    name: "Culture Exchange – Half or full day ",
+    time:[
+      "9am-12am",
+      "2pm-5pm",
+      "9am-5pm"
+    ],
+    description: [
+      "Join club with local students (club’s members) – Hanoi Free Private Tour Guide’s office",
+      "Cooking club - Hanoi Free Private Tour Guide’s office"
     ]
   }
 ];
