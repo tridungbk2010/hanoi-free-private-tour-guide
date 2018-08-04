@@ -117,9 +117,11 @@ class BookTourForm extends Component {
       finalRs = tourDefaultTime
         ? Object.assign({}, existTour, { time: tourDefaultTime.time[0] })
         : existTour;
+    }else {
+      finalRs = existTour;
     }
-    actions
-      .saveTourist(finalRs)
+
+    actions.saveTourist(finalRs)
       .then(() => {
         this.setState({ saving: false, bookSuccess: true });
       })

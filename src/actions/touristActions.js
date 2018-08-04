@@ -20,7 +20,8 @@ export function saveTourist(tourist) {
       .post(url, {
         fullname: tourist.name,
         tour_name: tourist.tour,
-        departure_date: 'Date: ' + tourist.date + ' Time: ' + tourist.time,
+        departure_date: tourist.date,
+        duration: tourist.time,
         tourist_number: tourist.no,
         nation: tourist.country,
         email: tourist.email,
