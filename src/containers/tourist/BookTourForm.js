@@ -106,22 +106,18 @@ class BookTourForm extends Component {
       return;
     }
     this.setState({ saving: true });
-    let finalRs = {};
-    const existTour = this.props.overlayTour.tour
+    let existTour = this.props.overlayTour.tour
       ? Object.assign({}, this.state.tourist, {
           tour: this.props.overlayTour.tour
         })
       : this.state.tourist;
     if (!this.state.tourist.time) {
-      const tourDefaultTime = DATA_TOUR.find(tour => tour.name === this.state.tourist.tour);
-      finalRs = tourDefaultTime
+      const tourDefaultTime = DATA_TOUR.find(tour => tour.name === existTour.tour);
+      existTour = tourDefaultTime
         ? Object.assign({}, existTour, { time: tourDefaultTime.time[0] })
         : existTour;
-    }else {
-      finalRs = existTour;
     }
-
-    actions.saveTourist(finalRs)
+    actions.saveTourist(existTour)
       .then(() => {
         this.setState({ saving: false, bookSuccess: true });
       })
